@@ -1,2 +1,3 @@
 # Microcontroller-Course-Work
-Greetings! Welcome to my new repository (but with old work) which contains all of my work on both microcontroller theory and practical courses at the time when I was still a sophomore. In this repository,  most topics are about the Microchip PIC Microcontroller.
+In this project, I presented a button interface and phase control techniques which are implemented with PIC16F1509 Microcontroller and 74HC595 shift registers to optimize the number of pins.
+Here are my demo videos on YouTube: https://youtu.be/SaVg_QAmbHg
