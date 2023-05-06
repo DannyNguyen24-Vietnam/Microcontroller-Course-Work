@@ -1,5 +1,5 @@
 # Microcontroller-Course-Work
-In this project, I presented two exercises using the ADC peripheral combined with 7-segment displays (exercise 7.1) and LCD (exercise 7.2) using PIC16F1509 and program them with MPLAB X IDE. \
+The topic of the week was about Timers, and I presented here two exercises implemented Timers for two different task: The 1st task (1st exercise) is to read the SRF04 sensor, and the 2nd task (2nd exercise) is to measure DC motor speed from reading the encoder. \
 Here are my video links:\
-For the 1st video: https://youtu.be/QC1YNGjXgVE \
-For the 2nd video: https://youtu.be/Uts9WVxIa1M
+For the 1st video: https://youtu.be/yx-I1ecu43A \
+For the 2nd video: https://youtu.be/8WEOxBfl50w
