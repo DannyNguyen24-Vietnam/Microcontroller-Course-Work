@@ -1,0 +1,2106 @@
+
+
+Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
+                                                                                               Thu Mar 24 21:54:13 2022
+
+Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
+     1                           	processor	16F1509
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+     7                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=2,noexec
+     8                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+     9                           	dabs	1,0x7E,2
+    10  0000                     
+    11                           ; Version 2.40
+    12                           ; Generated 17/11/2021 GMT
+    13                           ; 
+    14                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    15                           ; All rights reserved.
+    16                           ; 
+    17                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    18                           ; 
+    19                           ; Redistribution and use in source and binary forms, with or without modification, are
+    20                           ; permitted provided that the following conditions are met:
+    21                           ; 
+    22                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    23                           ;        conditions and the following disclaimer.
+    24                           ; 
+    25                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    26                           ;        of conditions and the following disclaimer in the documentation and/or other
+    27                           ;        materials provided with the distribution. Publication is not required when
+    28                           ;        this file is used in an embedded application.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F1509 Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     	;# 
+    47  0001                     	;# 
+    48  0002                     	;# 
+    49  0003                     	;# 
+    50  0004                     	;# 
+    51  0005                     	;# 
+    52  0006                     	;# 
+    53  0007                     	;# 
+    54  0008                     	;# 
+    55  0009                     	;# 
+    56  000A                     	;# 
+    57  000B                     	;# 
+    58  000C                     	;# 
+    59  000D                     	;# 
+    60  000E                     	;# 
+    61  0011                     	;# 
+    62  0012                     	;# 
+    63  0013                     	;# 
+    64  0015                     	;# 
+    65  0016                     	;# 
+    66  0016                     	;# 
+    67  0017                     	;# 
+    68  0018                     	;# 
+    69  0019                     	;# 
+    70  001A                     	;# 
+    71  001B                     	;# 
+    72  001C                     	;# 
+    73  008C                     	;# 
+    74  008D                     	;# 
+    75  008E                     	;# 
+    76  0091                     	;# 
+    77  0092                     	;# 
+    78  0093                     	;# 
+    79  0095                     	;# 
+    80  0096                     	;# 
+    81  0097                     	;# 
+    82  0099                     	;# 
+    83  009A                     	;# 
+    84  009B                     	;# 
+    85  009B                     	;# 
+    86  009C                     	;# 
+    87  009D                     	;# 
+    88  009E                     	;# 
+    89  009F                     	;# 
+    90  010C                     	;# 
+    91  010D                     	;# 
+    92  010E                     	;# 
+    93  0111                     	;# 
+    94  0112                     	;# 
+    95  0113                     	;# 
+    96  0114                     	;# 
+    97  0115                     	;# 
+    98  0116                     	;# 
+    99  0117                     	;# 
+   100  0118                     	;# 
+   101  0119                     	;# 
+   102  011D                     	;# 
+   103  018C                     	;# 
+   104  018D                     	;# 
+   105  018E                     	;# 
+   106  0191                     	;# 
+   107  0191                     	;# 
+   108  0192                     	;# 
+   109  0193                     	;# 
+   110  0193                     	;# 
+   111  0194                     	;# 
+   112  0195                     	;# 
+   113  0196                     	;# 
+   114  0197                     	;# 
+   115  0199                     	;# 
+   116  019A                     	;# 
+   117  019B                     	;# 
+   118  019B                     	;# 
+   119  019C                     	;# 
+   120  019D                     	;# 
+   121  019E                     	;# 
+   122  019F                     	;# 
+   123  020C                     	;# 
+   124  020D                     	;# 
+   125  0211                     	;# 
+   126  0211                     	;# 
+   127  0212                     	;# 
+   128  0212                     	;# 
+   129  0213                     	;# 
+   130  0213                     	;# 
+   131  0214                     	;# 
+   132  0214                     	;# 
+   133  0215                     	;# 
+   134  0215                     	;# 
+   135  0215                     	;# 
+   136  0216                     	;# 
+   137  0216                     	;# 
+   138  0217                     	;# 
+   139  0217                     	;# 
+   140  0391                     	;# 
+   141  0392                     	;# 
+   142  0393                     	;# 
+   143  0394                     	;# 
+   144  0395                     	;# 
+   145  0396                     	;# 
+   146  0498                     	;# 
+   147  0498                     	;# 
+   148  0499                     	;# 
+   149  049A                     	;# 
+   150  049B                     	;# 
+   151  049B                     	;# 
+   152  049C                     	;# 
+   153  049D                     	;# 
+   154  049E                     	;# 
+   155  049F                     	;# 
+   156  0611                     	;# 
+   157  0612                     	;# 
+   158  0613                     	;# 
+   159  0613                     	;# 
+   160  0614                     	;# 
+   161  0615                     	;# 
+   162  0616                     	;# 
+   163  0616                     	;# 
+   164  0617                     	;# 
+   165  0618                     	;# 
+   166  0619                     	;# 
+   167  0619                     	;# 
+   168  061A                     	;# 
+   169  061B                     	;# 
+   170  061C                     	;# 
+   171  061C                     	;# 
+   172  0691                     	;# 
+   173  0692                     	;# 
+   174  0693                     	;# 
+   175  0694                     	;# 
+   176  0695                     	;# 
+   177  0F0F                     	;# 
+   178  0F10                     	;# 
+   179  0F11                     	;# 
+   180  0F12                     	;# 
+   181  0F13                     	;# 
+   182  0F14                     	;# 
+   183  0F15                     	;# 
+   184  0F16                     	;# 
+   185  0F17                     	;# 
+   186  0F18                     	;# 
+   187  0F19                     	;# 
+   188  0F1A                     	;# 
+   189  0F1B                     	;# 
+   190  0F1C                     	;# 
+   191  0F1D                     	;# 
+   192  0F1E                     	;# 
+   193  0F1F                     	;# 
+   194  0F20                     	;# 
+   195  0F21                     	;# 
+   196  0F22                     	;# 
+   197  0F23                     	;# 
+   198  0F24                     	;# 
+   199  0F25                     	;# 
+   200  0F26                     	;# 
+   201  0F27                     	;# 
+   202  0F28                     	;# 
+   203  0F29                     	;# 
+   204  0F2A                     	;# 
+   205  0F2B                     	;# 
+   206  0F2C                     	;# 
+   207  0F2D                     	;# 
+   208  0F2E                     	;# 
+   209  0F2F                     	;# 
+   210  0F8C                     	;# 
+   211  0F8D                     	;# 
+   212  0F91                     	;# 
+   213  0F95                     	;# 
+   214  0F96                     	;# 
+   215  0F97                     	;# 
+   216  0F9C                     	;# 
+   217  0F9D                     	;# 
+   218  0F9E                     	;# 
+   219  0FE3                     	;# 
+   220  0FE4                     	;# 
+   221  0FE5                     	;# 
+   222  0FE6                     	;# 
+   223  0FE7                     	;# 
+   224  0FE8                     	;# 
+   225  0FE9                     	;# 
+   226  0FEA                     	;# 
+   227  0FEB                     	;# 
+   228  0FED                     	;# 
+   229  0FEE                     	;# 
+   230  0FEF                     	;# 
+   231  000E                     _PORTCbits	set	14
+   232  008E                     _TRISCbits	set	142
+   233  010E                     _LATCbits	set	270
+   234  018E                     _ANSELC	set	398
+   235                           
+   236                           	psect	cinit
+   237  07FD                     start_initialization:	
+   238                           ; #config settings
+   239                           
+   240  07FD                     __initialization:
+   241  07FD                     end_of_initialization:	
+   242                           ;End of C runtime variable initialization code
+   243                           
+   244  07FD                     __end_of__initialization:
+   245  07FD  0020               	movlb	0
+   246  07FE  3184  2CBB         	ljmp	_main	;jump to C main() function
+   247                           
+   248                           	psect	cstackCOMMON
+   249  0070                     __pcstackCOMMON:
+   250  0070                     ?_main:
+   251  0070                     ??_main:	
+   252                           ; 1 bytes @ 0x0
+   253                           
+   254                           
+   255                           ; 1 bytes @ 0x0
+   256  0070                     	ds	1
+   257  0071                     main@reset_counter:
+   258                           
+   259                           ; 2 bytes @ 0x1
+   260  0071                     	ds	2
+   261  0073                     main@second_tracking:
+   262                           
+   263                           ; 2 bytes @ 0x3
+   264  0073                     	ds	2
+   265  0075                     main@state:
+   266                           
+   267                           ; 2 bytes @ 0x5
+   268  0075                     	ds	2
+   269                           
+   270                           	psect	maintext
+   271  04BB                     __pmaintext:	
+   272 ;;
+   273 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   274 ;;
+   275 ;; *************** function _main *****************
+   276 ;; Defined at:
+   277 ;;		line 37 in file "buttonS1.c"
+   278 ;; Parameters:    Size  Location     Type
+   279 ;;		None
+   280 ;; Auto vars:     Size  Location     Type
+   281 ;;  state           2    5[COMMON] int 
+   282 ;;  second_track    2    3[COMMON] int 
+   283 ;;  reset_counte    2    1[COMMON] int 
+   284 ;; Return value:  Size  Location     Type
+   285 ;;                  1    wreg      void 
+   286 ;; Registers used:
+   287 ;;		wreg, status,2, status,0
+   288 ;; Tracked objects:
+   289 ;;		On entry : B1F/0
+   290 ;;		On exit  : 0/0
+   291 ;;		Unchanged: 0/0
+   292 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   293 ;;      Params:         0       0       0       0       0       0       0       0
+   294 ;;      Locals:         6       0       0       0       0       0       0       0
+   295 ;;      Temps:          1       0       0       0       0       0       0       0
+   296 ;;      Totals:         7       0       0       0       0       0       0       0
+   297 ;;Total ram usage:        7 bytes
+   298 ;; This function calls:
+   299 ;;		Nothing
+   300 ;; This function is called by:
+   301 ;;		Startup code after reset
+   302 ;; This function uses a non-reentrant model
+   303 ;;
+   304                           
+   305  04BB                     _main:	
+   306                           ;psect for function _main
+   307                           
+   308  04BB                     l625:	
+   309                           ;incstack = 0
+   310                           ; Regs used in _main: [wreg+status,2+status,0]
+   311                           
+   312                           
+   313                           ;buttonS1.c: 39:     TRISCbits.TRISC5 =0;
+   314  04BB  0021               	movlb	1	; select bank1
+   315  04BC  128E               	bcf	14,5	;volatile
+   316                           
+   317                           ;buttonS1.c: 40:     TRISCbits.TRISC6 =0;
+   318  04BD  130E               	bcf	14,6	;volatile
+   319                           
+   320                           ;buttonS1.c: 41:     TRISCbits.TRISC7 =0;
+   321  04BE  138E               	bcf	14,7	;volatile
+   322                           
+   323                           ;buttonS1.c: 43:     TRISCbits.TRISC0 =1;
+   324  04BF  140E               	bsf	14,0	;volatile
+   325                           
+   326                           ;buttonS1.c: 44:     TRISCbits.TRISC1 =1;
+   327  04C0  148E               	bsf	14,1	;volatile
+   328                           
+   329                           ;buttonS1.c: 45:     TRISCbits.TRISC2 =1;
+   330  04C1  150E               	bsf	14,2	;volatile
+   331  04C2                     l627:
+   332                           
+   333                           ;buttonS1.c: 46:     ANSELC=0;
+   334  04C2  0023               	movlb	3	; select bank3
+   335  04C3  018E               	clrf	14	;volatile
+   336  04C4                     l629:
+   337                           
+   338                           ;buttonS1.c: 47:     LATCbits.LATC5 =0;
+   339  04C4  0022               	movlb	2	; select bank2
+   340  04C5  128E               	bcf	14,5	;volatile
+   341  04C6                     l631:
+   342                           
+   343                           ;buttonS1.c: 48:     LATCbits.LATC6 =0;
+   344  04C6  130E               	bcf	14,6	;volatile
+   345  04C7                     l633:
+   346                           
+   347                           ;buttonS1.c: 49:     LATCbits.LATC7 =0;
+   348  04C7  138E               	bcf	14,7	;volatile
+   349                           
+   350                           ;buttonS1.c: 50:     int second_tracking=0;
+   351  04C8  01F3               	clrf	main@second_tracking
+   352  04C9  01F4               	clrf	main@second_tracking+1
+   353                           
+   354                           ;buttonS1.c: 51:     int state = 0;
+   355  04CA  01F5               	clrf	main@state
+   356  04CB  01F6               	clrf	main@state+1
+   357                           
+   358                           ;buttonS1.c: 52:     int reset_counter=0;
+   359  04CC  01F1               	clrf	main@reset_counter
+   360  04CD  01F2               	clrf	main@reset_counter+1
+   361  04CE                     l635:
+   362                           
+   363                           ;buttonS1.c: 55:         if((state==0&&PORTCbits.RC0==1)||(state==9&&PORTCbits.RC0==1)){
+   364  04CE  0875               	movf	main@state,w
+   365  04CF  0476               	iorwf	main@state+1,w
+   366  04D0  1D03               	btfss	3,2
+   367  04D1  2CD3               	goto	u11
+   368  04D2  2CD4               	goto	u10
+   369  04D3                     u11:
+   370  04D3  2CD9               	goto	l639
+   371  04D4                     u10:
+   372  04D4                     l637:
+   373  04D4  0020               	movlb	0	; select bank0
+   374  04D5  180E               	btfsc	14,0	;volatile
+   375  04D6  2CD8               	goto	u21
+   376  04D7  2CD9               	goto	u20
+   377  04D8                     u21:
+   378  04D8  2CE5               	goto	l643
+   379  04D9                     u20:
+   380  04D9                     l639:
+   381  04D9  3009               	movlw	9
+   382  04DA  0675               	xorwf	main@state,w
+   383  04DB  0476               	iorwf	main@state+1,w
+   384  04DC  1D03               	btfss	3,2
+   385  04DD  2CDF               	goto	u31
+   386  04DE  2CE0               	goto	u30
+   387  04DF                     u31:
+   388  04DF  2CF6               	goto	l649
+   389  04E0                     u30:
+   390  04E0                     l641:
+   391  04E0  0020               	movlb	0	; select bank0
+   392  04E1  1C0E               	btfss	14,0	;volatile
+   393  04E2  2CE4               	goto	u41
+   394  04E3  2CE5               	goto	u40
+   395  04E4                     u41:
+   396  04E4  2CF6               	goto	l649
+   397  04E5                     u40:
+   398  04E5                     l643:
+   399                           
+   400                           ;buttonS1.c: 56:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   401  04E5  301E               	movlw	30
+   402  04E6  00F0               	movwf	??_main
+   403  04E7  3037               	movlw	55
+   404  04E8                     u837:
+   405  04E8  0B89               	decfsz	9,f
+   406  04E9  2CE8               	goto	u837
+   407  04EA  0BF0               	decfsz	??_main,f
+   408  04EB  2CE8               	goto	u837
+   409  04EC  0000               	nop
+   410  04ED                     l645:
+   411                           
+   412                           ;buttonS1.c: 57:             if(PORTCbits.RC0==1){
+   413  04ED  0020               	movlb	0	; select bank0
+   414  04EE  1C0E               	btfss	14,0	;volatile
+   415  04EF  2CF1               	goto	u51
+   416  04F0  2CF2               	goto	u50
+   417  04F1                     u51:
+   418  04F1  2CF6               	goto	l649
+   419  04F2                     u50:
+   420  04F2                     l647:
+   421                           
+   422                           ;buttonS1.c: 58:                 state = 1;
+   423  04F2  3001               	movlw	1
+   424  04F3  00F5               	movwf	main@state
+   425  04F4  3000               	movlw	0
+   426  04F5  00F6               	movwf	main@state+1
+   427  04F6                     l649:
+   428                           
+   429                           ;buttonS1.c: 61:         if(state==1&&PORTCbits.RC0==0){
+   430  04F6  0375               	decf	main@state,w
+   431  04F7  0476               	iorwf	main@state+1,w
+   432  04F8  1D03               	btfss	3,2
+   433  04F9  2CFB               	goto	u61
+   434  04FA  2CFC               	goto	u60
+   435  04FB                     u61:
+   436  04FB  2D05               	goto	l655
+   437  04FC                     u60:
+   438  04FC                     l651:
+   439  04FC  0020               	movlb	0	; select bank0
+   440  04FD  180E               	btfsc	14,0	;volatile
+   441  04FE  2D00               	goto	u71
+   442  04FF  2D01               	goto	u70
+   443  0500                     u71:
+   444  0500  2D05               	goto	l655
+   445  0501                     u70:
+   446  0501                     l653:
+   447                           
+   448                           ;buttonS1.c: 62:             state = 2;
+   449  0501  3002               	movlw	2
+   450  0502  00F5               	movwf	main@state
+   451  0503  3000               	movlw	0
+   452  0504  00F6               	movwf	main@state+1
+   453  0505                     l655:
+   454                           
+   455                           ;buttonS1.c: 64:         if((state==2&&PORTCbits.RC0==1)||(state==11&&PORTCbits.RC0==1))
+      +                          {
+   456  0505  3002               	movlw	2
+   457  0506  0675               	xorwf	main@state,w
+   458  0507  0476               	iorwf	main@state+1,w
+   459  0508  1D03               	btfss	3,2
+   460  0509  2D0B               	goto	u81
+   461  050A  2D0C               	goto	u80
+   462  050B                     u81:
+   463  050B  2D11               	goto	l659
+   464  050C                     u80:
+   465  050C                     l657:
+   466  050C  0020               	movlb	0	; select bank0
+   467  050D  180E               	btfsc	14,0	;volatile
+   468  050E  2D10               	goto	u91
+   469  050F  2D11               	goto	u90
+   470  0510                     u91:
+   471  0510  2D1D               	goto	l663
+   472  0511                     u90:
+   473  0511                     l659:
+   474  0511  300B               	movlw	11
+   475  0512  0675               	xorwf	main@state,w
+   476  0513  0476               	iorwf	main@state+1,w
+   477  0514  1D03               	btfss	3,2
+   478  0515  2D17               	goto	u101
+   479  0516  2D18               	goto	u100
+   480  0517                     u101:
+   481  0517  2D2E               	goto	l669
+   482  0518                     u100:
+   483  0518                     l661:
+   484  0518  0020               	movlb	0	; select bank0
+   485  0519  1C0E               	btfss	14,0	;volatile
+   486  051A  2D1C               	goto	u111
+   487  051B  2D1D               	goto	u110
+   488  051C                     u111:
+   489  051C  2D2E               	goto	l669
+   490  051D                     u110:
+   491  051D                     l663:
+   492                           
+   493                           ;buttonS1.c: 65:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   494  051D  301E               	movlw	30
+   495  051E  00F0               	movwf	??_main
+   496  051F  3037               	movlw	55
+   497  0520                     u847:
+   498  0520  0B89               	decfsz	9,f
+   499  0521  2D20               	goto	u847
+   500  0522  0BF0               	decfsz	??_main,f
+   501  0523  2D20               	goto	u847
+   502  0524  0000               	nop
+   503  0525                     l665:
+   504                           
+   505                           ;buttonS1.c: 66:             if(PORTCbits.RC0==1){
+   506  0525  0020               	movlb	0	; select bank0
+   507  0526  1C0E               	btfss	14,0	;volatile
+   508  0527  2D29               	goto	u121
+   509  0528  2D2A               	goto	u120
+   510  0529                     u121:
+   511  0529  2D2E               	goto	l669
+   512  052A                     u120:
+   513  052A                     l667:
+   514                           
+   515                           ;buttonS1.c: 67:                 state = 3;
+   516  052A  3003               	movlw	3
+   517  052B  00F5               	movwf	main@state
+   518  052C  3000               	movlw	0
+   519  052D  00F6               	movwf	main@state+1
+   520  052E                     l669:
+   521                           
+   522                           ;buttonS1.c: 70:         if(state==3&&PORTCbits.RC0==0){
+   523  052E  3003               	movlw	3
+   524  052F  0675               	xorwf	main@state,w
+   525  0530  0476               	iorwf	main@state+1,w
+   526  0531  1D03               	btfss	3,2
+   527  0532  2D34               	goto	u131
+   528  0533  2D35               	goto	u130
+   529  0534                     u131:
+   530  0534  2D3E               	goto	l675
+   531  0535                     u130:
+   532  0535                     l671:
+   533  0535  0020               	movlb	0	; select bank0
+   534  0536  180E               	btfsc	14,0	;volatile
+   535  0537  2D39               	goto	u141
+   536  0538  2D3A               	goto	u140
+   537  0539                     u141:
+   538  0539  2D3E               	goto	l675
+   539  053A                     u140:
+   540  053A                     l673:
+   541                           
+   542                           ;buttonS1.c: 71:             state = 4;
+   543  053A  3004               	movlw	4
+   544  053B  00F5               	movwf	main@state
+   545  053C  3000               	movlw	0
+   546  053D  00F6               	movwf	main@state+1
+   547  053E                     l675:
+   548                           
+   549                           ;buttonS1.c: 73:         if((state==4&&PORTCbits.RC0==1)||(state==13&&PORTCbits.RC0==1))
+      +                          {
+   550  053E  3004               	movlw	4
+   551  053F  0675               	xorwf	main@state,w
+   552  0540  0476               	iorwf	main@state+1,w
+   553  0541  1D03               	btfss	3,2
+   554  0542  2D44               	goto	u151
+   555  0543  2D45               	goto	u150
+   556  0544                     u151:
+   557  0544  2D4A               	goto	l679
+   558  0545                     u150:
+   559  0545                     l677:
+   560  0545  0020               	movlb	0	; select bank0
+   561  0546  180E               	btfsc	14,0	;volatile
+   562  0547  2D49               	goto	u161
+   563  0548  2D4A               	goto	u160
+   564  0549                     u161:
+   565  0549  2D56               	goto	l683
+   566  054A                     u160:
+   567  054A                     l679:
+   568  054A  300D               	movlw	13
+   569  054B  0675               	xorwf	main@state,w
+   570  054C  0476               	iorwf	main@state+1,w
+   571  054D  1D03               	btfss	3,2
+   572  054E  2D50               	goto	u171
+   573  054F  2D51               	goto	u170
+   574  0550                     u171:
+   575  0550  2D67               	goto	l689
+   576  0551                     u170:
+   577  0551                     l681:
+   578  0551  0020               	movlb	0	; select bank0
+   579  0552  1C0E               	btfss	14,0	;volatile
+   580  0553  2D55               	goto	u181
+   581  0554  2D56               	goto	u180
+   582  0555                     u181:
+   583  0555  2D67               	goto	l689
+   584  0556                     u180:
+   585  0556                     l683:
+   586                           
+   587                           ;buttonS1.c: 74:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   588  0556  301E               	movlw	30
+   589  0557  00F0               	movwf	??_main
+   590  0558  3037               	movlw	55
+   591  0559                     u857:
+   592  0559  0B89               	decfsz	9,f
+   593  055A  2D59               	goto	u857
+   594  055B  0BF0               	decfsz	??_main,f
+   595  055C  2D59               	goto	u857
+   596  055D  0000               	nop
+   597  055E                     l685:
+   598                           
+   599                           ;buttonS1.c: 75:             if(PORTCbits.RC0==1){
+   600  055E  0020               	movlb	0	; select bank0
+   601  055F  1C0E               	btfss	14,0	;volatile
+   602  0560  2D62               	goto	u191
+   603  0561  2D63               	goto	u190
+   604  0562                     u191:
+   605  0562  2D67               	goto	l689
+   606  0563                     u190:
+   607  0563                     l687:
+   608                           
+   609                           ;buttonS1.c: 76:                 state = 5;
+   610  0563  3005               	movlw	5
+   611  0564  00F5               	movwf	main@state
+   612  0565  3000               	movlw	0
+   613  0566  00F6               	movwf	main@state+1
+   614  0567                     l689:
+   615                           
+   616                           ;buttonS1.c: 79:         if(state==5&&PORTCbits.RC0==0){
+   617  0567  3005               	movlw	5
+   618  0568  0675               	xorwf	main@state,w
+   619  0569  0476               	iorwf	main@state+1,w
+   620  056A  1D03               	btfss	3,2
+   621  056B  2D6D               	goto	u201
+   622  056C  2D6E               	goto	u200
+   623  056D                     u201:
+   624  056D  2D77               	goto	l695
+   625  056E                     u200:
+   626  056E                     l691:
+   627  056E  0020               	movlb	0	; select bank0
+   628  056F  180E               	btfsc	14,0	;volatile
+   629  0570  2D72               	goto	u211
+   630  0571  2D73               	goto	u210
+   631  0572                     u211:
+   632  0572  2D77               	goto	l695
+   633  0573                     u210:
+   634  0573                     l693:
+   635                           
+   636                           ;buttonS1.c: 80:             state = 6;
+   637  0573  3006               	movlw	6
+   638  0574  00F5               	movwf	main@state
+   639  0575  3000               	movlw	0
+   640  0576  00F6               	movwf	main@state+1
+   641  0577                     l695:
+   642                           
+   643                           ;buttonS1.c: 82:         if(state==6&&PORTCbits.RC0==1){
+   644  0577  3006               	movlw	6
+   645  0578  0675               	xorwf	main@state,w
+   646  0579  0476               	iorwf	main@state+1,w
+   647  057A  1D03               	btfss	3,2
+   648  057B  2D7D               	goto	u221
+   649  057C  2D7E               	goto	u220
+   650  057D                     u221:
+   651  057D  2D94               	goto	l705
+   652  057E                     u220:
+   653  057E                     l697:
+   654  057E  0020               	movlb	0	; select bank0
+   655  057F  1C0E               	btfss	14,0	;volatile
+   656  0580  2D82               	goto	u231
+   657  0581  2D83               	goto	u230
+   658  0582                     u231:
+   659  0582  2D94               	goto	l705
+   660  0583                     u230:
+   661  0583                     l699:
+   662                           
+   663                           ;buttonS1.c: 83:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   664  0583  301E               	movlw	30
+   665  0584  00F0               	movwf	??_main
+   666  0585  3037               	movlw	55
+   667  0586                     u867:
+   668  0586  0B89               	decfsz	9,f
+   669  0587  2D86               	goto	u867
+   670  0588  0BF0               	decfsz	??_main,f
+   671  0589  2D86               	goto	u867
+   672  058A  0000               	nop
+   673  058B                     l701:
+   674                           
+   675                           ;buttonS1.c: 84:             if(PORTCbits.RC0==1){
+   676  058B  0020               	movlb	0	; select bank0
+   677  058C  1C0E               	btfss	14,0	;volatile
+   678  058D  2D8F               	goto	u241
+   679  058E  2D90               	goto	u240
+   680  058F                     u241:
+   681  058F  2D94               	goto	l705
+   682  0590                     u240:
+   683  0590                     l703:
+   684                           
+   685                           ;buttonS1.c: 85:                 state = 7;
+   686  0590  3007               	movlw	7
+   687  0591  00F5               	movwf	main@state
+   688  0592  3000               	movlw	0
+   689  0593  00F6               	movwf	main@state+1
+   690  0594                     l705:
+   691                           
+   692                           ;buttonS1.c: 88:         if(state==7&&PORTCbits.RC0==0){
+   693  0594  3007               	movlw	7
+   694  0595  0675               	xorwf	main@state,w
+   695  0596  0476               	iorwf	main@state+1,w
+   696  0597  1D03               	btfss	3,2
+   697  0598  2D9A               	goto	u251
+   698  0599  2D9B               	goto	u250
+   699  059A                     u251:
+   700  059A  2DA2               	goto	l711
+   701  059B                     u250:
+   702  059B                     l707:
+   703  059B  0020               	movlb	0	; select bank0
+   704  059C  180E               	btfsc	14,0	;volatile
+   705  059D  2D9F               	goto	u261
+   706  059E  2DA0               	goto	u260
+   707  059F                     u261:
+   708  059F  2DA2               	goto	l711
+   709  05A0                     u260:
+   710  05A0                     l709:
+   711                           
+   712                           ;buttonS1.c: 89:             state = 0;
+   713  05A0  01F5               	clrf	main@state
+   714  05A1  01F6               	clrf	main@state+1
+   715  05A2                     l711:
+   716                           
+   717                           ;buttonS1.c: 92:         if((state==0&&PORTCbits.RC1==1)||(state==2&&PORTCbits.RC1==1)){
+   718  05A2  0875               	movf	main@state,w
+   719  05A3  0476               	iorwf	main@state+1,w
+   720  05A4  1D03               	btfss	3,2
+   721  05A5  2DA7               	goto	u271
+   722  05A6  2DA8               	goto	u270
+   723  05A7                     u271:
+   724  05A7  2DAD               	goto	l715
+   725  05A8                     u270:
+   726  05A8                     l713:
+   727  05A8  0020               	movlb	0	; select bank0
+   728  05A9  188E               	btfsc	14,1	;volatile
+   729  05AA  2DAC               	goto	u281
+   730  05AB  2DAD               	goto	u280
+   731  05AC                     u281:
+   732  05AC  2DB9               	goto	l719
+   733  05AD                     u280:
+   734  05AD                     l715:
+   735  05AD  3002               	movlw	2
+   736  05AE  0675               	xorwf	main@state,w
+   737  05AF  0476               	iorwf	main@state+1,w
+   738  05B0  1D03               	btfss	3,2
+   739  05B1  2DB3               	goto	u291
+   740  05B2  2DB4               	goto	u290
+   741  05B3                     u291:
+   742  05B3  2DCA               	goto	l725
+   743  05B4                     u290:
+   744  05B4                     l717:
+   745  05B4  0020               	movlb	0	; select bank0
+   746  05B5  1C8E               	btfss	14,1	;volatile
+   747  05B6  2DB8               	goto	u301
+   748  05B7  2DB9               	goto	u300
+   749  05B8                     u301:
+   750  05B8  2DCA               	goto	l725
+   751  05B9                     u300:
+   752  05B9                     l719:
+   753                           
+   754                           ;buttonS1.c: 93:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   755  05B9  301E               	movlw	30
+   756  05BA  00F0               	movwf	??_main
+   757  05BB  3037               	movlw	55
+   758  05BC                     u877:
+   759  05BC  0B89               	decfsz	9,f
+   760  05BD  2DBC               	goto	u877
+   761  05BE  0BF0               	decfsz	??_main,f
+   762  05BF  2DBC               	goto	u877
+   763  05C0  0000               	nop
+   764  05C1                     l721:
+   765                           
+   766                           ;buttonS1.c: 94:             if(PORTCbits.RC1==1){
+   767  05C1  0020               	movlb	0	; select bank0
+   768  05C2  1C8E               	btfss	14,1	;volatile
+   769  05C3  2DC5               	goto	u311
+   770  05C4  2DC6               	goto	u310
+   771  05C5                     u311:
+   772  05C5  2DCA               	goto	l725
+   773  05C6                     u310:
+   774  05C6                     l723:
+   775                           
+   776                           ;buttonS1.c: 95:                 state = 8;
+   777  05C6  3008               	movlw	8
+   778  05C7  00F5               	movwf	main@state
+   779  05C8  3000               	movlw	0
+   780  05C9  00F6               	movwf	main@state+1
+   781  05CA                     l725:
+   782                           
+   783                           ;buttonS1.c: 98:         if(state==8&&PORTCbits.RC1==0){
+   784  05CA  3008               	movlw	8
+   785  05CB  0675               	xorwf	main@state,w
+   786  05CC  0476               	iorwf	main@state+1,w
+   787  05CD  1D03               	btfss	3,2
+   788  05CE  2DD0               	goto	u321
+   789  05CF  2DD1               	goto	u320
+   790  05D0                     u321:
+   791  05D0  2DDA               	goto	l731
+   792  05D1                     u320:
+   793  05D1                     l727:
+   794  05D1  0020               	movlb	0	; select bank0
+   795  05D2  188E               	btfsc	14,1	;volatile
+   796  05D3  2DD5               	goto	u331
+   797  05D4  2DD6               	goto	u330
+   798  05D5                     u331:
+   799  05D5  2DDA               	goto	l731
+   800  05D6                     u330:
+   801  05D6                     l729:
+   802                           
+   803                           ;buttonS1.c: 99:             state = 9;
+   804  05D6  3009               	movlw	9
+   805  05D7  00F5               	movwf	main@state
+   806  05D8  3000               	movlw	0
+   807  05D9  00F6               	movwf	main@state+1
+   808  05DA                     l731:
+   809                           
+   810                           ;buttonS1.c: 101:         if(state==9&&PORTCbits.RC1==1){
+   811  05DA  3009               	movlw	9
+   812  05DB  0675               	xorwf	main@state,w
+   813  05DC  0476               	iorwf	main@state+1,w
+   814  05DD  1D03               	btfss	3,2
+   815  05DE  2DE0               	goto	u341
+   816  05DF  2DE1               	goto	u340
+   817  05E0                     u341:
+   818  05E0  2DF7               	goto	l741
+   819  05E1                     u340:
+   820  05E1                     l733:
+   821  05E1  0020               	movlb	0	; select bank0
+   822  05E2  1C8E               	btfss	14,1	;volatile
+   823  05E3  2DE5               	goto	u351
+   824  05E4  2DE6               	goto	u350
+   825  05E5                     u351:
+   826  05E5  2DF7               	goto	l741
+   827  05E6                     u350:
+   828  05E6                     l735:
+   829                           
+   830                           ;buttonS1.c: 102:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   831  05E6  301E               	movlw	30
+   832  05E7  00F0               	movwf	??_main
+   833  05E8  3037               	movlw	55
+   834  05E9                     u887:
+   835  05E9  0B89               	decfsz	9,f
+   836  05EA  2DE9               	goto	u887
+   837  05EB  0BF0               	decfsz	??_main,f
+   838  05EC  2DE9               	goto	u887
+   839  05ED  0000               	nop
+   840  05EE                     l737:
+   841                           
+   842                           ;buttonS1.c: 103:             if(PORTCbits.RC1==1){
+   843  05EE  0020               	movlb	0	; select bank0
+   844  05EF  1C8E               	btfss	14,1	;volatile
+   845  05F0  2DF2               	goto	u361
+   846  05F1  2DF3               	goto	u360
+   847  05F2                     u361:
+   848  05F2  2DF7               	goto	l741
+   849  05F3                     u360:
+   850  05F3                     l739:
+   851                           
+   852                           ;buttonS1.c: 104:                 state = 10;
+   853  05F3  300A               	movlw	10
+   854  05F4  00F5               	movwf	main@state
+   855  05F5  3000               	movlw	0
+   856  05F6  00F6               	movwf	main@state+1
+   857  05F7                     l741:
+   858                           
+   859                           ;buttonS1.c: 108:         if(state==4&&PORTCbits.RC1==1){
+   860  05F7  3004               	movlw	4
+   861  05F8  0675               	xorwf	main@state,w
+   862  05F9  0476               	iorwf	main@state+1,w
+   863  05FA  1D03               	btfss	3,2
+   864  05FB  2DFD               	goto	u371
+   865  05FC  2DFE               	goto	u370
+   866  05FD                     u371:
+   867  05FD  2E14               	goto	l751
+   868  05FE                     u370:
+   869  05FE                     l743:
+   870  05FE  0020               	movlb	0	; select bank0
+   871  05FF  1C8E               	btfss	14,1	;volatile
+   872  0600  2E02               	goto	u381
+   873  0601  2E03               	goto	u380
+   874  0602                     u381:
+   875  0602  2E14               	goto	l751
+   876  0603                     u380:
+   877  0603                     l745:
+   878                           
+   879                           ;buttonS1.c: 109:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   880  0603  301E               	movlw	30
+   881  0604  00F0               	movwf	??_main
+   882  0605  3037               	movlw	55
+   883  0606                     u897:
+   884  0606  0B89               	decfsz	9,f
+   885  0607  2E06               	goto	u897
+   886  0608  0BF0               	decfsz	??_main,f
+   887  0609  2E06               	goto	u897
+   888  060A  0000               	nop
+   889  060B                     l747:
+   890                           
+   891                           ;buttonS1.c: 110:             if(PORTCbits.RC1==1){
+   892  060B  0020               	movlb	0	; select bank0
+   893  060C  1C8E               	btfss	14,1	;volatile
+   894  060D  2E0F               	goto	u391
+   895  060E  2E10               	goto	u390
+   896  060F                     u391:
+   897  060F  2E14               	goto	l751
+   898  0610                     u390:
+   899  0610                     l749:
+   900                           
+   901                           ;buttonS1.c: 111:                 state = 15;
+   902  0610  300F               	movlw	15
+   903  0611  00F5               	movwf	main@state
+   904  0612  3000               	movlw	0
+   905  0613  00F6               	movwf	main@state+1
+   906  0614                     l751:
+   907                           
+   908                           ;buttonS1.c: 114:         if(state==10&&PORTCbits.RC1==0){
+   909  0614  300A               	movlw	10
+   910  0615  0675               	xorwf	main@state,w
+   911  0616  0476               	iorwf	main@state+1,w
+   912  0617  1D03               	btfss	3,2
+   913  0618  2E1A               	goto	u401
+   914  0619  2E1B               	goto	u400
+   915  061A                     u401:
+   916  061A  2E24               	goto	l757
+   917  061B                     u400:
+   918  061B                     l753:
+   919  061B  0020               	movlb	0	; select bank0
+   920  061C  188E               	btfsc	14,1	;volatile
+   921  061D  2E1F               	goto	u411
+   922  061E  2E20               	goto	u410
+   923  061F                     u411:
+   924  061F  2E24               	goto	l757
+   925  0620                     u410:
+   926  0620                     l755:
+   927                           
+   928                           ;buttonS1.c: 115:             state = 11;
+   929  0620  300B               	movlw	11
+   930  0621  00F5               	movwf	main@state
+   931  0622  3000               	movlw	0
+   932  0623  00F6               	movwf	main@state+1
+   933  0624                     l757:
+   934                           
+   935                           ;buttonS1.c: 117:         if(state==11&&PORTCbits.RC1==1){
+   936  0624  300B               	movlw	11
+   937  0625  0675               	xorwf	main@state,w
+   938  0626  0476               	iorwf	main@state+1,w
+   939  0627  1D03               	btfss	3,2
+   940  0628  2E2A               	goto	u421
+   941  0629  2E2B               	goto	u420
+   942  062A                     u421:
+   943  062A  2E41               	goto	l767
+   944  062B                     u420:
+   945  062B                     l759:
+   946  062B  0020               	movlb	0	; select bank0
+   947  062C  1C8E               	btfss	14,1	;volatile
+   948  062D  2E2F               	goto	u431
+   949  062E  2E30               	goto	u430
+   950  062F                     u431:
+   951  062F  2E41               	goto	l767
+   952  0630                     u430:
+   953  0630                     l761:
+   954                           
+   955                           ;buttonS1.c: 118:             _delay((unsigned long)((90)*(1000000/4000.0)));
+   956  0630  301E               	movlw	30
+   957  0631  00F0               	movwf	??_main
+   958  0632  3037               	movlw	55
+   959  0633                     u907:
+   960  0633  0B89               	decfsz	9,f
+   961  0634  2E33               	goto	u907
+   962  0635  0BF0               	decfsz	??_main,f
+   963  0636  2E33               	goto	u907
+   964  0637  0000               	nop
+   965  0638                     l763:
+   966                           
+   967                           ;buttonS1.c: 119:             if(PORTCbits.RC1==1){
+   968  0638  0020               	movlb	0	; select bank0
+   969  0639  1C8E               	btfss	14,1	;volatile
+   970  063A  2E3C               	goto	u441
+   971  063B  2E3D               	goto	u440
+   972  063C                     u441:
+   973  063C  2E41               	goto	l767
+   974  063D                     u440:
+   975  063D                     l765:
+   976                           
+   977                           ;buttonS1.c: 120:                 state = 12;
+   978  063D  300C               	movlw	12
+   979  063E  00F5               	movwf	main@state
+   980  063F  3000               	movlw	0
+   981  0640  00F6               	movwf	main@state+1
+   982  0641                     l767:
+   983                           
+   984                           ;buttonS1.c: 124:         if(state==6&&PORTCbits.RC1==1){
+   985  0641  3006               	movlw	6
+   986  0642  0675               	xorwf	main@state,w
+   987  0643  0476               	iorwf	main@state+1,w
+   988  0644  1D03               	btfss	3,2
+   989  0645  2E47               	goto	u451
+   990  0646  2E48               	goto	u450
+   991  0647                     u451:
+   992  0647  2E5E               	goto	l777
+   993  0648                     u450:
+   994  0648                     l769:
+   995  0648  0020               	movlb	0	; select bank0
+   996  0649  1C8E               	btfss	14,1	;volatile
+   997  064A  2E4C               	goto	u461
+   998  064B  2E4D               	goto	u460
+   999  064C                     u461:
+  1000  064C  2E5E               	goto	l777
+  1001  064D                     u460:
+  1002  064D                     l771:
+  1003                           
+  1004                           ;buttonS1.c: 125:             _delay((unsigned long)((90)*(1000000/4000.0)));
+  1005  064D  301E               	movlw	30
+  1006  064E  00F0               	movwf	??_main
+  1007  064F  3037               	movlw	55
+  1008  0650                     u917:
+  1009  0650  0B89               	decfsz	9,f
+  1010  0651  2E50               	goto	u917
+  1011  0652  0BF0               	decfsz	??_main,f
+  1012  0653  2E50               	goto	u917
+  1013  0654  0000               	nop
+  1014  0655                     l773:
+  1015                           
+  1016                           ;buttonS1.c: 126:             if(PORTCbits.RC1==1){
+  1017  0655  0020               	movlb	0	; select bank0
+  1018  0656  1C8E               	btfss	14,1	;volatile
+  1019  0657  2E59               	goto	u471
+  1020  0658  2E5A               	goto	u470
+  1021  0659                     u471:
+  1022  0659  2E5E               	goto	l777
+  1023  065A                     u470:
+  1024  065A                     l775:
+  1025                           
+  1026                           ;buttonS1.c: 127:                 state = 16;
+  1027  065A  3010               	movlw	16
+  1028  065B  00F5               	movwf	main@state
+  1029  065C  3000               	movlw	0
+  1030  065D  00F6               	movwf	main@state+1
+  1031  065E                     l777:
+  1032                           
+  1033                           ;buttonS1.c: 130:         if(state==12&&PORTCbits.RC1==0){
+  1034  065E  300C               	movlw	12
+  1035  065F  0675               	xorwf	main@state,w
+  1036  0660  0476               	iorwf	main@state+1,w
+  1037  0661  1D03               	btfss	3,2
+  1038  0662  2E64               	goto	u481
+  1039  0663  2E65               	goto	u480
+  1040  0664                     u481:
+  1041  0664  2E6E               	goto	l783
+  1042  0665                     u480:
+  1043  0665                     l779:
+  1044  0665  0020               	movlb	0	; select bank0
+  1045  0666  188E               	btfsc	14,1	;volatile
+  1046  0667  2E69               	goto	u491
+  1047  0668  2E6A               	goto	u490
+  1048  0669                     u491:
+  1049  0669  2E6E               	goto	l783
+  1050  066A                     u490:
+  1051  066A                     l781:
+  1052                           
+  1053                           ;buttonS1.c: 131:             state = 13;
+  1054  066A  300D               	movlw	13
+  1055  066B  00F5               	movwf	main@state
+  1056  066C  3000               	movlw	0
+  1057  066D  00F6               	movwf	main@state+1
+  1058  066E                     l783:
+  1059                           
+  1060                           ;buttonS1.c: 133:         if(state==13&&PORTCbits.RC1==1){
+  1061  066E  300D               	movlw	13
+  1062  066F  0675               	xorwf	main@state,w
+  1063  0670  0476               	iorwf	main@state+1,w
+  1064  0671  1D03               	btfss	3,2
+  1065  0672  2E74               	goto	u501
+  1066  0673  2E75               	goto	u500
+  1067  0674                     u501:
+  1068  0674  2E8B               	goto	l793
+  1069  0675                     u500:
+  1070  0675                     l785:
+  1071  0675  0020               	movlb	0	; select bank0
+  1072  0676  1C8E               	btfss	14,1	;volatile
+  1073  0677  2E79               	goto	u511
+  1074  0678  2E7A               	goto	u510
+  1075  0679                     u511:
+  1076  0679  2E8B               	goto	l793
+  1077  067A                     u510:
+  1078  067A                     l787:
+  1079                           
+  1080                           ;buttonS1.c: 134:             _delay((unsigned long)((90)*(1000000/4000.0)));
+  1081  067A  301E               	movlw	30
+  1082  067B  00F0               	movwf	??_main
+  1083  067C  3037               	movlw	55
+  1084  067D                     u927:
+  1085  067D  0B89               	decfsz	9,f
+  1086  067E  2E7D               	goto	u927
+  1087  067F  0BF0               	decfsz	??_main,f
+  1088  0680  2E7D               	goto	u927
+  1089  0681  0000               	nop
+  1090  0682                     l789:
+  1091                           
+  1092                           ;buttonS1.c: 135:             if(PORTCbits.RC1==1){
+  1093  0682  0020               	movlb	0	; select bank0
+  1094  0683  1C8E               	btfss	14,1	;volatile
+  1095  0684  2E86               	goto	u521
+  1096  0685  2E87               	goto	u520
+  1097  0686                     u521:
+  1098  0686  2E8B               	goto	l793
+  1099  0687                     u520:
+  1100  0687                     l791:
+  1101                           
+  1102                           ;buttonS1.c: 136:                 state = 14;
+  1103  0687  300E               	movlw	14
+  1104  0688  00F5               	movwf	main@state
+  1105  0689  3000               	movlw	0
+  1106  068A  00F6               	movwf	main@state+1
+  1107  068B                     l793:
+  1108                           
+  1109                           ;buttonS1.c: 139:         if(state==15&&PORTCbits.RC1==0){
+  1110  068B  300F               	movlw	15
+  1111  068C  0675               	xorwf	main@state,w
+  1112  068D  0476               	iorwf	main@state+1,w
+  1113  068E  1D03               	btfss	3,2
+  1114  068F  2E91               	goto	u531
+  1115  0690  2E92               	goto	u530
+  1116  0691                     u531:
+  1117  0691  2E9B               	goto	l799
+  1118  0692                     u530:
+  1119  0692                     l795:
+  1120  0692  0020               	movlb	0	; select bank0
+  1121  0693  188E               	btfsc	14,1	;volatile
+  1122  0694  2E96               	goto	u541
+  1123  0695  2E97               	goto	u540
+  1124  0696                     u541:
+  1125  0696  2E9B               	goto	l799
+  1126  0697                     u540:
+  1127  0697                     l797:
+  1128                           
+  1129                           ;buttonS1.c: 140:             state = 11;
+  1130  0697  300B               	movlw	11
+  1131  0698  00F5               	movwf	main@state
+  1132  0699  3000               	movlw	0
+  1133  069A  00F6               	movwf	main@state+1
+  1134  069B                     l799:
+  1135                           
+  1136                           ;buttonS1.c: 142:         if(state==16&&PORTCbits.RC1==0){
+  1137  069B  3010               	movlw	16
+  1138  069C  0675               	xorwf	main@state,w
+  1139  069D  0476               	iorwf	main@state+1,w
+  1140  069E  1D03               	btfss	3,2
+  1141  069F  2EA1               	goto	u551
+  1142  06A0  2EA2               	goto	u550
+  1143  06A1                     u551:
+  1144  06A1  2EAB               	goto	l805
+  1145  06A2                     u550:
+  1146  06A2                     l801:
+  1147  06A2  0020               	movlb	0	; select bank0
+  1148  06A3  188E               	btfsc	14,1	;volatile
+  1149  06A4  2EA6               	goto	u561
+  1150  06A5  2EA7               	goto	u560
+  1151  06A6                     u561:
+  1152  06A6  2EAB               	goto	l805
+  1153  06A7                     u560:
+  1154  06A7                     l803:
+  1155                           
+  1156                           ;buttonS1.c: 143:             state = 13;
+  1157  06A7  300D               	movlw	13
+  1158  06A8  00F5               	movwf	main@state
+  1159  06A9  3000               	movlw	0
+  1160  06AA  00F6               	movwf	main@state+1
+  1161  06AB                     l805:
+  1162                           
+  1163                           ;buttonS1.c: 145:         if(state==14&&PORTCbits.RC1==0){
+  1164  06AB  300E               	movlw	14
+  1165  06AC  0675               	xorwf	main@state,w
+  1166  06AD  0476               	iorwf	main@state+1,w
+  1167  06AE  1D03               	btfss	3,2
+  1168  06AF  2EB1               	goto	u571
+  1169  06B0  2EB2               	goto	u570
+  1170  06B1                     u571:
+  1171  06B1  2EB9               	goto	l811
+  1172  06B2                     u570:
+  1173  06B2                     l807:
+  1174  06B2  0020               	movlb	0	; select bank0
+  1175  06B3  188E               	btfsc	14,1	;volatile
+  1176  06B4  2EB6               	goto	u581
+  1177  06B5  2EB7               	goto	u580
+  1178  06B6                     u581:
+  1179  06B6  2EB9               	goto	l811
+  1180  06B7                     u580:
+  1181  06B7                     l809:
+  1182                           
+  1183                           ;buttonS1.c: 146:             state = 0;
+  1184  06B7  01F5               	clrf	main@state
+  1185  06B8  01F6               	clrf	main@state+1
+  1186  06B9                     l811:
+  1187                           
+  1188                           ;buttonS1.c: 150:         if(PORTCbits.RC2==1&&state<7){
+  1189  06B9  0020               	movlb	0	; select bank0
+  1190  06BA  1D0E               	btfss	14,2	;volatile
+  1191  06BB  2EBD               	goto	u591
+  1192  06BC  2EBE               	goto	u590
+  1193  06BD                     u591:
+  1194  06BD  2EE6               	goto	l62
+  1195  06BE                     u590:
+  1196  06BE                     l813:
+  1197  06BE  0876               	movf	main@state+1,w
+  1198  06BF  3A80               	xorlw	128
+  1199  06C0  00F0               	movwf	??_main
+  1200  06C1  3080               	movlw	128
+  1201  06C2  0270               	subwf	??_main,w
+  1202  06C3  1D03               	skipz
+  1203  06C4  2EC7               	goto	u605
+  1204  06C5  3007               	movlw	7
+  1205  06C6  0275               	subwf	main@state,w
+  1206  06C7                     u605:
+  1207  06C7  1803               	skipnc
+  1208  06C8  2ECA               	goto	u601
+  1209  06C9  2ECB               	goto	u600
+  1210  06CA                     u601:
+  1211  06CA  2EE6               	goto	l62
+  1212  06CB                     u600:
+  1213  06CB                     l815:
+  1214                           
+  1215                           ;buttonS1.c: 151:             if(reset_counter<1200){
+  1216  06CB  0872               	movf	main@reset_counter+1,w
+  1217  06CC  3A80               	xorlw	128
+  1218  06CD  00F0               	movwf	??_main
+  1219  06CE  3084               	movlw	132
+  1220  06CF  0270               	subwf	??_main,w
+  1221  06D0  1D03               	skipz
+  1222  06D1  2ED4               	goto	u615
+  1223  06D2  30B0               	movlw	176
+  1224  06D3  0271               	subwf	main@reset_counter,w
+  1225  06D4                     u615:
+  1226  06D4  1803               	skipnc
+  1227  06D5  2ED7               	goto	u611
+  1228  06D6  2ED8               	goto	u610
+  1229  06D7                     u611:
+  1230  06D7  2EDD               	goto	l819
+  1231  06D8                     u610:
+  1232  06D8                     l817:
+  1233                           
+  1234                           ;buttonS1.c: 152:                 reset_counter+=1;
+  1235  06D8  3001               	movlw	1
+  1236  06D9  07F1               	addwf	main@reset_counter,f
+  1237  06DA  3000               	movlw	0
+  1238  06DB  3DF2               	addwfc	main@reset_counter+1,f
+  1239                           
+  1240                           ;buttonS1.c: 153:             } else {reset_counter=0;
+  1241  06DC  2EED               	goto	l829
+  1242  06DD                     l819:
+  1243  06DD  01F1               	clrf	main@reset_counter
+  1244  06DE  01F2               	clrf	main@reset_counter+1
+  1245                           
+  1246                           ;buttonS1.c: 154:                         state=0;
+  1247  06DF  01F5               	clrf	main@state
+  1248  06E0  01F6               	clrf	main@state+1
+  1249  06E1                     l821:
+  1250                           
+  1251                           ;buttonS1.c: 155:                         LATCbits.LATC5=0;
+  1252  06E1  0022               	movlb	2	; select bank2
+  1253  06E2  128E               	bcf	14,5	;volatile
+  1254  06E3                     l823:
+  1255                           
+  1256                           ;buttonS1.c: 156:                         LATCbits.LATC6=0;
+  1257  06E3  130E               	bcf	14,6	;volatile
+  1258  06E4                     l825:
+  1259                           
+  1260                           ;buttonS1.c: 157:                         LATCbits.LATC7=0;
+  1261  06E4  138E               	bcf	14,7	;volatile
+  1262  06E5  2EED               	goto	l829
+  1263  06E6                     l62:
+  1264  06E6  0020               	movlb	0	; select bank0
+  1265  06E7  190E               	btfsc	14,2	;volatile
+  1266  06E8  2EEA               	goto	u621
+  1267  06E9  2EEB               	goto	u620
+  1268  06EA                     u621:
+  1269  06EA  2EED               	goto	l829
+  1270  06EB                     u620:
+  1271  06EB                     l827:
+  1272                           
+  1273                           ;buttonS1.c: 160:             reset_counter=0;
+  1274  06EB  01F1               	clrf	main@reset_counter
+  1275  06EC  01F2               	clrf	main@reset_counter+1
+  1276  06ED                     l829:
+  1277                           
+  1278                           ;buttonS1.c: 162:         if(PORTCbits.RC2==1&&state>7){
+  1279  06ED  0020               	movlb	0	; select bank0
+  1280  06EE  1D0E               	btfss	14,2	;volatile
+  1281  06EF  2EF1               	goto	u631
+  1282  06F0  2EF2               	goto	u630
+  1283  06F1                     u631:
+  1284  06F1  2F1A               	goto	l67
+  1285  06F2                     u630:
+  1286  06F2                     l831:
+  1287  06F2  0876               	movf	main@state+1,w
+  1288  06F3  3A80               	xorlw	128
+  1289  06F4  00F0               	movwf	??_main
+  1290  06F5  3080               	movlw	128
+  1291  06F6  0270               	subwf	??_main,w
+  1292  06F7  1D03               	skipz
+  1293  06F8  2EFB               	goto	u645
+  1294  06F9  3008               	movlw	8
+  1295  06FA  0275               	subwf	main@state,w
+  1296  06FB                     u645:
+  1297  06FB  1C03               	skipc
+  1298  06FC  2EFE               	goto	u641
+  1299  06FD  2EFF               	goto	u640
+  1300  06FE                     u641:
+  1301  06FE  2F1A               	goto	l67
+  1302  06FF                     u640:
+  1303  06FF                     l833:
+  1304                           
+  1305                           ;buttonS1.c: 163:             if(reset_counter<650){
+  1306  06FF  0872               	movf	main@reset_counter+1,w
+  1307  0700  3A80               	xorlw	128
+  1308  0701  00F0               	movwf	??_main
+  1309  0702  3082               	movlw	130
+  1310  0703  0270               	subwf	??_main,w
+  1311  0704  1D03               	skipz
+  1312  0705  2F08               	goto	u655
+  1313  0706  308A               	movlw	138
+  1314  0707  0271               	subwf	main@reset_counter,w
+  1315  0708                     u655:
+  1316  0708  1803               	skipnc
+  1317  0709  2F0B               	goto	u651
+  1318  070A  2F0C               	goto	u650
+  1319  070B                     u651:
+  1320  070B  2F11               	goto	l837
+  1321  070C                     u650:
+  1322  070C                     l835:
+  1323                           
+  1324                           ;buttonS1.c: 164:                 reset_counter+=1;
+  1325  070C  3001               	movlw	1
+  1326  070D  07F1               	addwf	main@reset_counter,f
+  1327  070E  3000               	movlw	0
+  1328  070F  3DF2               	addwfc	main@reset_counter+1,f
+  1329                           
+  1330                           ;buttonS1.c: 165:             } else {reset_counter=0;
+  1331  0710  2F21               	goto	l847
+  1332  0711                     l837:
+  1333  0711  01F1               	clrf	main@reset_counter
+  1334  0712  01F2               	clrf	main@reset_counter+1
+  1335                           
+  1336                           ;buttonS1.c: 166:                         state=0;
+  1337  0713  01F5               	clrf	main@state
+  1338  0714  01F6               	clrf	main@state+1
+  1339  0715                     l839:
+  1340                           
+  1341                           ;buttonS1.c: 167:                         LATCbits.LATC5=0;
+  1342  0715  0022               	movlb	2	; select bank2
+  1343  0716  128E               	bcf	14,5	;volatile
+  1344  0717                     l841:
+  1345                           
+  1346                           ;buttonS1.c: 168:                         LATCbits.LATC6=0;
+  1347  0717  130E               	bcf	14,6	;volatile
+  1348  0718                     l843:
+  1349                           
+  1350                           ;buttonS1.c: 169:                         LATCbits.LATC7=0;
+  1351  0718  138E               	bcf	14,7	;volatile
+  1352  0719  2F21               	goto	l847
+  1353  071A                     l67:
+  1354  071A  0020               	movlb	0	; select bank0
+  1355  071B  190E               	btfsc	14,2	;volatile
+  1356  071C  2F1E               	goto	u661
+  1357  071D  2F1F               	goto	u660
+  1358  071E                     u661:
+  1359  071E  2F21               	goto	l847
+  1360  071F                     u660:
+  1361  071F                     l845:
+  1362                           
+  1363                           ;buttonS1.c: 172:             reset_counter=0;
+  1364  071F  01F1               	clrf	main@reset_counter
+  1365  0720  01F2               	clrf	main@reset_counter+1
+  1366  0721                     l847:
+  1367                           
+  1368                           ;buttonS1.c: 175:         if(state==0){
+  1369  0721  0875               	movf	main@state,w
+  1370  0722  0476               	iorwf	main@state+1,w
+  1371  0723  1D03               	btfss	3,2
+  1372  0724  2F26               	goto	u671
+  1373  0725  2F27               	goto	u670
+  1374  0726                     u671:
+  1375  0726  2F2B               	goto	l851
+  1376  0727                     u670:
+  1377  0727                     l849:
+  1378                           
+  1379                           ;buttonS1.c: 176:             LATCbits.LATC5=0;
+  1380  0727  0022               	movlb	2	; select bank2
+  1381  0728  128E               	bcf	14,5	;volatile
+  1382                           
+  1383                           ;buttonS1.c: 177:             LATCbits.LATC6=0;
+  1384  0729  130E               	bcf	14,6	;volatile
+  1385                           
+  1386                           ;buttonS1.c: 178:             LATCbits.LATC7=0;
+  1387  072A  138E               	bcf	14,7	;volatile
+  1388  072B                     l851:
+  1389                           
+  1390                           ;buttonS1.c: 180:         if(state==2){
+  1391  072B  3002               	movlw	2
+  1392  072C  0675               	xorwf	main@state,w
+  1393  072D  0476               	iorwf	main@state+1,w
+  1394  072E  1D03               	btfss	3,2
+  1395  072F  2F31               	goto	u681
+  1396  0730  2F32               	goto	u680
+  1397  0731                     u681:
+  1398  0731  2F36               	goto	l855
+  1399  0732                     u680:
+  1400  0732                     l853:
+  1401                           
+  1402                           ;buttonS1.c: 181:              LATCbits.LATC5=1;
+  1403  0732  0022               	movlb	2	; select bank2
+  1404  0733  168E               	bsf	14,5	;volatile
+  1405                           
+  1406                           ;buttonS1.c: 182:              LATCbits.LATC6=0;
+  1407  0734  130E               	bcf	14,6	;volatile
+  1408                           
+  1409                           ;buttonS1.c: 183:              LATCbits.LATC7=0;
+  1410  0735  138E               	bcf	14,7	;volatile
+  1411  0736                     l855:
+  1412                           
+  1413                           ;buttonS1.c: 185:         if(state==4){
+  1414  0736  3004               	movlw	4
+  1415  0737  0675               	xorwf	main@state,w
+  1416  0738  0476               	iorwf	main@state+1,w
+  1417  0739  1D03               	btfss	3,2
+  1418  073A  2F3C               	goto	u691
+  1419  073B  2F3D               	goto	u690
+  1420  073C                     u691:
+  1421  073C  2F41               	goto	l859
+  1422  073D                     u690:
+  1423  073D                     l857:
+  1424                           
+  1425                           ;buttonS1.c: 186:              LATCbits.LATC5=0;
+  1426  073D  0022               	movlb	2	; select bank2
+  1427  073E  128E               	bcf	14,5	;volatile
+  1428                           
+  1429                           ;buttonS1.c: 187:              LATCbits.LATC6=1;
+  1430  073F  170E               	bsf	14,6	;volatile
+  1431                           
+  1432                           ;buttonS1.c: 188:              LATCbits.LATC7=0;
+  1433  0740  138E               	bcf	14,7	;volatile
+  1434  0741                     l859:
+  1435                           
+  1436                           ;buttonS1.c: 190:         if(state==6){
+  1437  0741  3006               	movlw	6
+  1438  0742  0675               	xorwf	main@state,w
+  1439  0743  0476               	iorwf	main@state+1,w
+  1440  0744  1D03               	btfss	3,2
+  1441  0745  2F47               	goto	u701
+  1442  0746  2F48               	goto	u700
+  1443  0747                     u701:
+  1444  0747  2F4C               	goto	l863
+  1445  0748                     u700:
+  1446  0748                     l861:
+  1447                           
+  1448                           ;buttonS1.c: 191:              LATCbits.LATC5=0;
+  1449  0748  0022               	movlb	2	; select bank2
+  1450  0749  128E               	bcf	14,5	;volatile
+  1451                           
+  1452                           ;buttonS1.c: 192:              LATCbits.LATC6=0;
+  1453  074A  130E               	bcf	14,6	;volatile
+  1454                           
+  1455                           ;buttonS1.c: 193:              LATCbits.LATC7=1;
+  1456  074B  178E               	bsf	14,7	;volatile
+  1457  074C                     l863:
+  1458                           
+  1459                           ;buttonS1.c: 195:         if(state==9||state==10){
+  1460  074C  3009               	movlw	9
+  1461  074D  0675               	xorwf	main@state,w
+  1462  074E  0476               	iorwf	main@state+1,w
+  1463  074F  1903               	btfsc	3,2
+  1464  0750  2F52               	goto	u711
+  1465  0751  2F53               	goto	u710
+  1466  0752                     u711:
+  1467  0752  2F5A               	goto	l867
+  1468  0753                     u710:
+  1469  0753                     l865:
+  1470  0753  300A               	movlw	10
+  1471  0754  0675               	xorwf	main@state,w
+  1472  0755  0476               	iorwf	main@state+1,w
+  1473  0756  1D03               	btfss	3,2
+  1474  0757  2F59               	goto	u721
+  1475  0758  2F5A               	goto	u720
+  1476  0759                     u721:
+  1477  0759  2F86               	goto	l881
+  1478  075A                     u720:
+  1479  075A                     l867:
+  1480                           
+  1481                           ;buttonS1.c: 196:             if(second_tracking<250){
+  1482  075A  0874               	movf	main@second_tracking+1,w
+  1483  075B  3A80               	xorlw	128
+  1484  075C  00F0               	movwf	??_main
+  1485  075D  3080               	movlw	128
+  1486  075E  0270               	subwf	??_main,w
+  1487  075F  1D03               	skipz
+  1488  0760  2F63               	goto	u735
+  1489  0761  30FA               	movlw	250
+  1490  0762  0273               	subwf	main@second_tracking,w
+  1491  0763                     u735:
+  1492  0763  1803               	skipnc
+  1493  0764  2F66               	goto	u731
+  1494  0765  2F67               	goto	u730
+  1495  0766                     u731:
+  1496  0766  2F74               	goto	l873
+  1497  0767                     u730:
+  1498  0767                     l869:
+  1499                           
+  1500                           ;buttonS1.c: 197:              LATCbits.LATC5=1;
+  1501  0767  0022               	movlb	2	; select bank2
+  1502  0768  168E               	bsf	14,5	;volatile
+  1503                           
+  1504                           ;buttonS1.c: 198:              LATCbits.LATC6=0;
+  1505  0769  130E               	bcf	14,6	;volatile
+  1506                           
+  1507                           ;buttonS1.c: 199:              LATCbits.LATC7=0;
+  1508  076A  138E               	bcf	14,7	;volatile
+  1509  076B                     l871:
+  1510                           
+  1511                           ;buttonS1.c: 200:              _delay((unsigned long)((1)*(1000000/4000.0)));
+  1512  076B  3053               	movlw	83
+  1513  076C                     u937:
+  1514  076C  0B89               	decfsz	9,f
+  1515  076D  2F6C               	goto	u937
+  1516  076E  0000               	nop
+  1517                           
+  1518                           ;buttonS1.c: 201:              second_tracking+=1;
+  1519  076F  3001               	movlw	1
+  1520  0770  07F3               	addwf	main@second_tracking,f
+  1521  0771  3000               	movlw	0
+  1522  0772  3DF4               	addwfc	main@second_tracking+1,f
+  1523                           
+  1524                           ;buttonS1.c: 202:            } else if(second_tracking<500){
+  1525  0773  2F86               	goto	l881
+  1526  0774                     l873:
+  1527  0774  0874               	movf	main@second_tracking+1,w
+  1528  0775  3A80               	xorlw	128
+  1529  0776  00F0               	movwf	??_main
+  1530  0777  3081               	movlw	129
+  1531  0778  0270               	subwf	??_main,w
+  1532  0779  1D03               	skipz
+  1533  077A  2F7D               	goto	u745
+  1534  077B  30F4               	movlw	244
+  1535  077C  0273               	subwf	main@second_tracking,w
+  1536  077D                     u745:
+  1537  077D  1803               	skipnc
+  1538  077E  2F80               	goto	u741
+  1539  077F  2F81               	goto	u740
+  1540  0780                     u741:
+  1541  0780  2F84               	goto	l879
+  1542  0781                     u740:
+  1543  0781                     l875:
+  1544                           
+  1545                           ;buttonS1.c: 203:              LATCbits.LATC5=0;
+  1546  0781  0022               	movlb	2	; select bank2
+  1547  0782  128E               	bcf	14,5	;volatile
+  1548  0783  2F6B               	goto	l871
+  1549  0784                     l879:
+  1550  0784  01F3               	clrf	main@second_tracking
+  1551  0785  01F4               	clrf	main@second_tracking+1
+  1552  0786                     l881:
+  1553                           
+  1554                           ;buttonS1.c: 208:         if(state==11||state==12){
+  1555  0786  300B               	movlw	11
+  1556  0787  0675               	xorwf	main@state,w
+  1557  0788  0476               	iorwf	main@state+1,w
+  1558  0789  1903               	btfsc	3,2
+  1559  078A  2F8C               	goto	u751
+  1560  078B  2F8D               	goto	u750
+  1561  078C                     u751:
+  1562  078C  2F94               	goto	l885
+  1563  078D                     u750:
+  1564  078D                     l883:
+  1565  078D  300C               	movlw	12
+  1566  078E  0675               	xorwf	main@state,w
+  1567  078F  0476               	iorwf	main@state+1,w
+  1568  0790  1D03               	btfss	3,2
+  1569  0791  2F93               	goto	u761
+  1570  0792  2F94               	goto	u760
+  1571  0793                     u761:
+  1572  0793  2FC0               	goto	l899
+  1573  0794                     u760:
+  1574  0794                     l885:
+  1575                           
+  1576                           ;buttonS1.c: 209:             if(second_tracking<250){
+  1577  0794  0874               	movf	main@second_tracking+1,w
+  1578  0795  3A80               	xorlw	128
+  1579  0796  00F0               	movwf	??_main
+  1580  0797  3080               	movlw	128
+  1581  0798  0270               	subwf	??_main,w
+  1582  0799  1D03               	skipz
+  1583  079A  2F9D               	goto	u775
+  1584  079B  30FA               	movlw	250
+  1585  079C  0273               	subwf	main@second_tracking,w
+  1586  079D                     u775:
+  1587  079D  1803               	skipnc
+  1588  079E  2FA0               	goto	u771
+  1589  079F  2FA1               	goto	u770
+  1590  07A0                     u771:
+  1591  07A0  2FAE               	goto	l891
+  1592  07A1                     u770:
+  1593  07A1                     l887:
+  1594                           
+  1595                           ;buttonS1.c: 210:              LATCbits.LATC5=0;
+  1596  07A1  0022               	movlb	2	; select bank2
+  1597  07A2  128E               	bcf	14,5	;volatile
+  1598                           
+  1599                           ;buttonS1.c: 211:              LATCbits.LATC6=1;
+  1600  07A3  170E               	bsf	14,6	;volatile
+  1601                           
+  1602                           ;buttonS1.c: 212:              LATCbits.LATC7=0;
+  1603  07A4  138E               	bcf	14,7	;volatile
+  1604  07A5                     l889:
+  1605                           
+  1606                           ;buttonS1.c: 213:              _delay((unsigned long)((1)*(1000000/4000.0)));
+  1607  07A5  3053               	movlw	83
+  1608  07A6                     u947:
+  1609  07A6  0B89               	decfsz	9,f
+  1610  07A7  2FA6               	goto	u947
+  1611  07A8  0000               	nop
+  1612                           
+  1613                           ;buttonS1.c: 214:              second_tracking+=1;
+  1614  07A9  3001               	movlw	1
+  1615  07AA  07F3               	addwf	main@second_tracking,f
+  1616  07AB  3000               	movlw	0
+  1617  07AC  3DF4               	addwfc	main@second_tracking+1,f
+  1618                           
+  1619                           ;buttonS1.c: 215:            } else if(second_tracking<500){
+  1620  07AD  2FC0               	goto	l899
+  1621  07AE                     l891:
+  1622  07AE  0874               	movf	main@second_tracking+1,w
+  1623  07AF  3A80               	xorlw	128
+  1624  07B0  00F0               	movwf	??_main
+  1625  07B1  3081               	movlw	129
+  1626  07B2  0270               	subwf	??_main,w
+  1627  07B3  1D03               	skipz
+  1628  07B4  2FB7               	goto	u785
+  1629  07B5  30F4               	movlw	244
+  1630  07B6  0273               	subwf	main@second_tracking,w
+  1631  07B7                     u785:
+  1632  07B7  1803               	skipnc
+  1633  07B8  2FBA               	goto	u781
+  1634  07B9  2FBB               	goto	u780
+  1635  07BA                     u781:
+  1636  07BA  2FBE               	goto	l897
+  1637  07BB                     u780:
+  1638  07BB                     l893:
+  1639                           
+  1640                           ;buttonS1.c: 216:              LATCbits.LATC6=0;
+  1641  07BB  0022               	movlb	2	; select bank2
+  1642  07BC  130E               	bcf	14,6	;volatile
+  1643  07BD  2FA5               	goto	l889
+  1644  07BE                     l897:
+  1645  07BE  01F3               	clrf	main@second_tracking
+  1646  07BF  01F4               	clrf	main@second_tracking+1
+  1647  07C0                     l899:
+  1648                           
+  1649                           ;buttonS1.c: 221:         if(state==13||state==14){
+  1650  07C0  300D               	movlw	13
+  1651  07C1  0675               	xorwf	main@state,w
+  1652  07C2  0476               	iorwf	main@state+1,w
+  1653  07C3  1903               	btfsc	3,2
+  1654  07C4  2FC6               	goto	u791
+  1655  07C5  2FC7               	goto	u790
+  1656  07C6                     u791:
+  1657  07C6  2FCE               	goto	l903
+  1658  07C7                     u790:
+  1659  07C7                     l901:
+  1660  07C7  300E               	movlw	14
+  1661  07C8  0675               	xorwf	main@state,w
+  1662  07C9  0476               	iorwf	main@state+1,w
+  1663  07CA  1D03               	btfss	3,2
+  1664  07CB  2FCD               	goto	u801
+  1665  07CC  2FCE               	goto	u800
+  1666  07CD                     u801:
+  1667  07CD  2CCE               	goto	l635
+  1668  07CE                     u800:
+  1669  07CE                     l903:
+  1670                           
+  1671                           ;buttonS1.c: 222:             if(second_tracking<250){
+  1672  07CE  0874               	movf	main@second_tracking+1,w
+  1673  07CF  3A80               	xorlw	128
+  1674  07D0  00F0               	movwf	??_main
+  1675  07D1  3080               	movlw	128
+  1676  07D2  0270               	subwf	??_main,w
+  1677  07D3  1D03               	skipz
+  1678  07D4  2FD7               	goto	u815
+  1679  07D5  30FA               	movlw	250
+  1680  07D6  0273               	subwf	main@second_tracking,w
+  1681  07D7                     u815:
+  1682  07D7  1803               	skipnc
+  1683  07D8  2FDA               	goto	u811
+  1684  07D9  2FDB               	goto	u810
+  1685  07DA                     u811:
+  1686  07DA  2FE8               	goto	l909
+  1687  07DB                     u810:
+  1688  07DB                     l905:
+  1689                           
+  1690                           ;buttonS1.c: 223:              LATCbits.LATC5=0;
+  1691  07DB  0022               	movlb	2	; select bank2
+  1692  07DC  128E               	bcf	14,5	;volatile
+  1693                           
+  1694                           ;buttonS1.c: 224:              LATCbits.LATC6=0;
+  1695  07DD  130E               	bcf	14,6	;volatile
+  1696                           
+  1697                           ;buttonS1.c: 225:              LATCbits.LATC7=1;
+  1698  07DE  178E               	bsf	14,7	;volatile
+  1699  07DF                     l907:
+  1700                           
+  1701                           ;buttonS1.c: 226:              _delay((unsigned long)((1)*(1000000/4000.0)));
+  1702  07DF  3053               	movlw	83
+  1703  07E0                     u957:
+  1704  07E0  0B89               	decfsz	9,f
+  1705  07E1  2FE0               	goto	u957
+  1706  07E2  0000               	nop
+  1707                           
+  1708                           ;buttonS1.c: 227:              second_tracking+=1;
+  1709  07E3  3001               	movlw	1
+  1710  07E4  07F3               	addwf	main@second_tracking,f
+  1711  07E5  3000               	movlw	0
+  1712  07E6  3DF4               	addwfc	main@second_tracking+1,f
+  1713                           
+  1714                           ;buttonS1.c: 228:            } else if(second_tracking<500){
+  1715  07E7  2CCE               	goto	l635
+  1716  07E8                     l909:
+  1717  07E8  0874               	movf	main@second_tracking+1,w
+  1718  07E9  3A80               	xorlw	128
+  1719  07EA  00F0               	movwf	??_main
+  1720  07EB  3081               	movlw	129
+  1721  07EC  0270               	subwf	??_main,w
+  1722  07ED  1D03               	skipz
+  1723  07EE  2FF1               	goto	u825
+  1724  07EF  30F4               	movlw	244
+  1725  07F0  0273               	subwf	main@second_tracking,w
+  1726  07F1                     u825:
+  1727  07F1  1803               	skipnc
+  1728  07F2  2FF4               	goto	u821
+  1729  07F3  2FF5               	goto	u820
+  1730  07F4                     u821:
+  1731  07F4  2FF8               	goto	l915
+  1732  07F5                     u820:
+  1733  07F5                     l911:
+  1734                           
+  1735                           ;buttonS1.c: 229:              LATCbits.LATC7=0;
+  1736  07F5  0022               	movlb	2	; select bank2
+  1737  07F6  138E               	bcf	14,7	;volatile
+  1738  07F7  2FDF               	goto	l907
+  1739  07F8                     l915:
+  1740  07F8  01F3               	clrf	main@second_tracking
+  1741  07F9  01F4               	clrf	main@second_tracking+1
+  1742  07FA  2CCE               	goto	l635
+  1743  07FB  3180  2802         	ljmp	start
+  1744  07FD                     __end_of_main:
+  1745  007E                     btemp	set	126	;btemp
+  1746  007E                     wtemp0	set	126
+  1747                           
+  1748                           	psect	idloc
+  1749                           
+  1750                           ;Config register IDLOC0 @ 0x8000
+  1751                           ;	unspecified, using default values
+  1752  8000                     	org	32768
+  1753  8000  3FFF               	dw	16383
+  1754                           
+  1755                           ;Config register IDLOC1 @ 0x8001
+  1756                           ;	unspecified, using default values
+  1757  8001                     	org	32769
+  1758  8001  3FFF               	dw	16383
+  1759                           
+  1760                           ;Config register IDLOC2 @ 0x8002
+  1761                           ;	unspecified, using default values
+  1762  8002                     	org	32770
+  1763  8002  3FFF               	dw	16383
+  1764                           
+  1765                           ;Config register IDLOC3 @ 0x8003
+  1766                           ;	unspecified, using default values
+  1767  8003                     	org	32771
+  1768  8003  3FFF               	dw	16383
+  1769                           
+  1770                           	psect	config
+  1771                           
+  1772                           ;Config register CONFIG1 @ 0x8007
+  1773                           ;	Oscillator Selection Bits
+  1774                           ;	FOSC = INTOSC, INTOSC oscillator: I/O function on CLKIN pin
+  1775                           ;	Watchdog Timer Enable
+  1776                           ;	WDTE = OFF, WDT disabled
+  1777                           ;	Power-up Timer Enable
+  1778                           ;	PWRTE = OFF, PWRT disabled
+  1779                           ;	MCLR Pin Function Select
+  1780                           ;	MCLRE = OFF, MCLR/VPP pin function is digital input
+  1781                           ;	Flash Program Memory Code Protection
+  1782                           ;	CP = OFF, Program memory code protection is disabled
+  1783                           ;	Brown-out Reset Enable
+  1784                           ;	BOREN = OFF, Brown-out Reset disabled
+  1785                           ;	Clock Out Enable
+  1786                           ;	CLKOUTEN = OFF, CLKOUT function is disabled. I/O or oscillator function on the CLKOUT 
+      +                          pin
+  1787                           ;	Internal/External Switchover Mode
+  1788                           ;	IESO = OFF, Internal/External Switchover Mode is disabled
+  1789                           ;	Fail-Safe Clock Monitor Enable
+  1790                           ;	FCMEN = OFF, Fail-Safe Clock Monitor is disabled
+  1791  8007                     	org	32775
+  1792  8007  09A4               	dw	2468
+  1793                           
+  1794                           ;Config register CONFIG2 @ 0x8008
+  1795                           ;	Flash Memory Self-Write Protection
+  1796                           ;	WRT = OFF, Write protection off
+  1797                           ;	Stack Overflow/Underflow Reset Enable
+  1798                           ;	STVREN = OFF, Stack Overflow or Underflow will not cause a Reset
+  1799                           ;	Brown-out Reset Voltage Selection
+  1800                           ;	BORV = LO, Brown-out Reset Voltage (Vbor), low trip point selected.
+  1801                           ;	Low-Power Brown Out Reset
+  1802                           ;	LPBOR = OFF, Low-Power BOR is disabled
+  1803                           ;	Low-Voltage Programming Enable
+  1804                           ;	LVP = OFF, High-voltage on MCLR/VPP must be used for programming
+  1805  8008                     	org	32776
+  1806  8008  1DFF               	dw	7679
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  32
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      7       7
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            16      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 7     7      0     660
+                                              0 COMMON     7     7      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             1F0      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      7       7       2       50.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0       0       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BANK0               50      0       0       6        0.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BITBANK1            50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BANK1               50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BITBANK2            50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BANK2               50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BITBANK3            50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BANK3               50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BITBANK4            50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BANK4               50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BITBANK5            50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BANK5               50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BITBANK6            10      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BANK6               10      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+DATA                 0      0       0      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
+Symbol Table                                                                                   Thu Mar 24 21:54:13 2022
+
+                     l62 06E6                       l67 071A                       u10 04D4  
+                     u11 04D3                       u20 04D9                       u21 04D8  
+                     u30 04E0                       u31 04DF                       u40 04E5  
+                     u41 04E4                       u50 04F2                       u51 04F1  
+                     u60 04FC                       u61 04FB                       u70 0501  
+                     u71 0500                       u80 050C                       u81 050B  
+                     u90 0511                       u91 0510                      l701 058B  
+                    l711 05A2                      l703 0590                      l631 04C6  
+                    l801 06A2                      l721 05C1                      l713 05A8  
+                    l705 0594                      l641 04E0                      l633 04C7  
+                    l625 04BB                      l811 06B9                      l803 06A7  
+                    l731 05DA                      l723 05C6                      l715 05AD  
+                    l707 059B                      l651 04FC                      l643 04E5  
+                    l635 04CE                      l627 04C2                      l901 07C7  
+                    l821 06E1                      l813 06BE                      l805 06AB  
+                    l733 05E1                      l741 05F7                      l717 05B4  
+                    l725 05CA                      l709 05A0                      l661 0518  
+                    l653 0501                      l645 04ED                      l637 04D4  
+                    l629 04C4                      l911 07F5                      l903 07CE  
+                    l831 06F2                      l823 06E3                      l815 06CB  
+                    l807 06B2                      l743 05FE                      l751 0614  
+                    l735 05E6                      l727 05D1                      l719 05B9  
+                    l671 0535                      l663 051D                      l655 0505  
+                    l647 04F2                      l639 04D9                      l905 07DB  
+                    l841 0717                      l833 06FF                      l825 06E4  
+                    l817 06D8                      l809 06B7                      l761 0630  
+                    l753 061B                      l745 0603                      l737 05EE  
+                    l729 05D6                      l681 0551                      l673 053A  
+                    l665 0525                      l657 050C                      l649 04F6  
+                    l915 07F8                      l907 07DF                      l851 072B  
+                    l843 0718                      l835 070C                      l827 06EB  
+                    l819 06DD                      l771 064D                      l763 0638  
+                    l755 0620                      l747 060B                      l739 05F3  
+                    l691 056E                      l683 0556                      l675 053E  
+                    l667 052A                      l659 0511                      l909 07E8  
+                    l861 0748                      l853 0732                      l845 071F  
+                    l837 0711                      l829 06ED                      l781 066A  
+                    l773 0655                      l765 063D                      l757 0624  
+                    l749 0610                      l693 0573                      l685 055E  
+                    l677 0545                      l669 052E                      l871 076B  
+                    l863 074C                      l855 0736                      l839 0715  
+                    l847 0721                      l791 0687                      l783 066E  
+                    l775 065A                      l759 062B                      l767 0641  
+                    l695 0577                      l687 0563                      l679 054A  
+                    l873 0774                      l881 0786                      l865 0753  
+                    l857 073D                      l849 0727                      l785 0675  
+                    l793 068B                      l769 0648                      l777 065E  
+                    l697 057E                      l689 0567                      l891 07AE  
+                    l883 078D                      l875 0781                      l867 075A  
+                    l859 0741                      l795 0692                      l787 067A  
+                    l779 0665                      l699 0583                      l893 07BB  
+                    l885 0794                      l869 0767                      l797 0697  
+                    l789 0682                      l887 07A1                      l879 0784  
+                    l799 069B                      l897 07BE                      l889 07A5  
+                    l899 07C0                      u100 0518                      u101 0517  
+                    u110 051D                      u111 051C                      u200 056E  
+                    u120 052A                      u201 056D                      u121 0529  
+                    u210 0573                      u130 0535                      u211 0572  
+                    u131 0534                      u300 05B9                      u220 057E  
+                    u140 053A                      u301 05B8                      u221 057D  
+                    u141 0539                      u310 05C6                      u230 0583  
+                    u150 0545                      u311 05C5                      u231 0582  
+                    u151 0544                      u400 061B                      u320 05D1  
+                    u240 0590                      u160 054A                      u401 061A  
+                    u321 05D0                      u241 058F                      u161 0549  
+                    u410 0620                      u330 05D6                      u250 059B  
+                    u170 0551                      u411 061F                      u331 05D5  
+                    u251 059A                      u171 0550                      u500 0675  
+                    u420 062B                      u340 05E1                      u260 05A0  
+                    u180 0556                      u501 0674                      u421 062A  
+                    u341 05E0                      u261 059F                      u181 0555  
+                    u510 067A                      u430 0630                      u350 05E6  
+                    u270 05A8                      u190 0563                      u511 0679  
+                    u431 062F                      u351 05E5                      u271 05A7  
+                    u191 0562                      u600 06CB                      u520 0687  
+                    u440 063D                      u360 05F3                      u280 05AD  
+                    u601 06CA                      u521 0686                      u441 063C  
+                    u361 05F2                      u281 05AC                      u610 06D8  
+                    u530 0692                      u450 0648                      u370 05FE  
+                    u290 05B4                      u611 06D7                      u531 0691  
+                    u451 0647                      u371 05FD                      u291 05B3  
+                    u700 0748                      u620 06EB                      u540 0697  
+                    u460 064D                      u380 0603                      u701 0747  
+                    u621 06EA                      u605 06C7                      u541 0696  
+                    u461 064C                      u381 0602                      u710 0753  
+                    u630 06F2                      u550 06A2                      u470 065A  
+                    u390 0610                      u711 0752                      u631 06F1  
+                    u615 06D4                      u551 06A1                      u471 0659  
+                    u391 060F                      u800 07CE                      u720 075A  
+                    u640 06FF                      u560 06A7                      u480 0665  
+                    u801 07CD                      u721 0759                      u641 06FE  
+                    u561 06A6                      u481 0664                      u810 07DB  
+                    u730 0767                      u650 070C                      u570 06B2  
+                    u490 066A                      u811 07DA                      u731 0766  
+                    u651 070B                      u571 06B1                      u491 0669  
+                    u820 07F5                      u740 0781                      u660 071F  
+                    u580 06B7                      u821 07F4                      u741 0780  
+                    u661 071E                      u645 06FB                      u581 06B6  
+                    u750 078D                      u670 0727                      u590 06BE  
+                    u815 07D7                      u751 078C                      u735 0763  
+                    u671 0726                      u655 0708                      u591 06BD  
+                    u760 0794                      u680 0732                      u825 07F1  
+                    u761 0793                      u745 077D                      u681 0731  
+                    u770 07A1                      u690 073D                      u771 07A0  
+                    u691 073C                      u907 0633                      u780 07BB  
+                    u781 07BA                      u917 0650                      u837 04E8  
+                    u790 07C7                      u791 07C6                      u775 079D  
+                    u927 067D                      u847 0520                      u785 07B7  
+                    u937 076C                      u857 0559                      u947 07A6  
+                    u867 0586                      u957 07E0                      u877 05BC  
+                    u887 05E9                      u897 0606                      wreg 0009  
+                   _main 04BB                     btemp 007E                     start 0002  
+                  ?_main 0070                    status 0003                    wtemp0 007E  
+        __initialization 07FD             __end_of_main 07FD                   ??_main 0070  
+                 _ANSELC 018E  __end_of__initialization 07FD      main@second_tracking 0073  
+         __pcstackCOMMON 0070               __pmaintext 04BB     end_of_initialization 07FD  
+      main@reset_counter 0071                _PORTCbits 000E                _TRISCbits 008E  
+    start_initialization 07FD                ___latbits 0002                 _LATCbits 010E  
+              main@state 0075  

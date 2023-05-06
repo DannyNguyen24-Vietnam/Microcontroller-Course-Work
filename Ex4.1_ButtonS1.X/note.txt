@@ -1,0 +1,93 @@
+// Button S1
+        if((state==0&&S1_input==1)||(state==9&&S1_input==1)){
+            __delay_ms(90);
+            if(S1_input==1){
+                state = 1;
+            }
+        }
+        if(state==1&&S1_input==0){
+            state = 2; // D1 on
+        }
+        if((state==2&&S1_input==1)||(state==11&&S1_input==1)){
+            __delay_ms(90);
+            if(S1_input==1){
+                state = 3; // D1 still on
+            }
+        }   
+        if(state==3&&S1_input==0){
+            state = 4; // D2 on
+        }
+        if((state==4&&S1_input==1)||(state==13&&S1_input==1)){
+            __delay_ms(90);
+            if(S1_input==1){
+                state = 5; // D2 still on
+            }
+        }
+        if(state==5&&S1_input==0){
+            state = 6; // D3 on  
+        }    
+        if(state==6&&S1_input==1){
+            __delay_ms(90);
+            if(S1_input==1){
+                state = 7; // D3 still on
+            }
+        }
+        if(state==7&&S1_input==0){
+            state = 0;
+        }
+    // Button S2
+        if((state==0&&S2_input==1)||(state==2&&S2_input==1)){
+            __delay_ms(90);            
+            if(S2_input==1){
+                state = 8; 
+            }
+        }
+        if(state==8&&S2_input==0){
+            state = 9; // D1 flashing
+        }
+        if(state==9&&S2_input==1){
+            __delay_ms(90);
+            if(S2_input==1){
+                state = 10; // D1 still flashing
+            }
+        }
+    // For debugging a phenomena
+        if(state==4&&S2_input==1){
+            __delay_ms(90);
+            if(S2_input==1){
+                state = 15;
+        }
+        if(state==10&&S2_input==0){
+            state = 11; // D2 flashing
+        }
+        if(state==11&&S2_input==1){
+            __delay_ms(90);
+            if(S2_input==1){
+                state = 12; // D2 still flashing
+            }
+        }
+    // For debugging a phenomena
+        if(state==6&&S2_input==1){
+            __delay_ms(90);
+            if(S2_input==1){
+                state = 16; // D2 still flashing
+            } 
+        }
+        if(state==12&&S2_input==0){
+            state = 13; // D3 flashing
+        }
+        if(state==13&&S2_input==1){
+            __delay_ms(90);
+            if(S2_input==1){
+                state = 14; // D3 still flashing
+            }
+        }
+        if(state==14&&S2_input==0){
+            state = 0; // D3 still flashing
+        }
+        if(state==15&&S2_input==0){
+            state = 11; // D3 still flashing
+        }
+        if(state==16&&S2_input==0){
+            state = 13; // D3 still flashing
+        }
