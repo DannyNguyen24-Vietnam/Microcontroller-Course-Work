@@ -1,2 +1,5 @@
 # Microcontroller-Course-Work
-Greetings! Welcome to my new repository (but with old work) which contains all of my work on both microcontroller theory and practical courses at the time when I was still a sophomore. In this repository,  most topics are about the Microchip PIC Microcontroller.
+In this project, I presented a 7-Segment LEDs Counter (from 00 to 99) and a 7-Segment Clock with 4 digits. They are both implemented with PIC16F1509 Microcontroller and 74HC595 shift registers to minimize the number of pins in used.\
+Here are my demo videos on YouTube:
+For the first exercise:  https://youtu.be/TJ96ekv4ujw
+For the second exercise: https://youtu.be/q6JPhFZQdI4
