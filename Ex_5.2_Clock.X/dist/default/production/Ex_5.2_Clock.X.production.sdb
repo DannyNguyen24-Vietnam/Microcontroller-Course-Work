@@ -1,0 +1,176 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1509 ]
+[d frameptr 6 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"44 D:\MPLAB-Sim\Ex_5.2_Clock.X\ex_5-2.c
+[v _clk0_pulse clk0_pulse `(v  1 e 1 0 ]
+"50
+[v _lat0_pulse lat0_pulse `(v  1 e 1 0 ]
+"56
+[v _clk1_pulse clk1_pulse `(v  1 e 1 0 ]
+"62
+[v _lat1_pulse lat1_pulse `(v  1 e 1 0 ]
+"71
+[v _data_0 data_0 `(v  1 e 1 0 ]
+"84
+[v _data_1 data_1 `(v  1 e 1 0 ]
+"97
+[v _set_clock set_clock `(v  1 e 1 0 ]
+"111
+[v _process_n_display process_n_display `(v  1 e 1 0 ]
+"147
+[v _main main `(v  1 e 1 0 ]
+[s S88 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"494 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1509.h
+[u S94 . 1 `S88 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES94  1 e 1 @13 ]
+[s S70 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1106
+[u S76 . 1 `S70 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES76  1 e 1 @141 ]
+[s S49 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1148
+[u S58 . 1 `S49 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES58  1 e 1 @142 ]
+"1951
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S22 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"1968
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _LATCbits LATCbits `VES31  1 e 1 @270 ]
+"2593
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2629
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"68 D:\MPLAB-Sim\Ex_5.2_Clock.X\ex_5-2.c
+[v _ComA_state ComA_state `[10]uc  1 e 10 0 ]
+"147
+[v _main main `(v  1 e 1 0 ]
+{
+"161
+[v main@min_counter min_counter `i  1 a 2 11 ]
+"163
+[v main@start_state start_state `uc  1 a 1 10 ]
+"220
+} 0
+"97
+[v _set_clock set_clock `(v  1 e 1 0 ]
+{
+"98
+[v set_clock@min_dis2 min_dis2 `uc  1 a 1 1 ]
+[v set_clock@min_dis1 min_dis1 `uc  1 a 1 0 ]
+"97
+[v set_clock@min_set min_set `i  1 p 2 9 ]
+"110
+} 0
+"111
+[v _process_n_display process_n_display `(v  1 e 1 0 ]
+{
+"112
+[v process_n_display@sec_counter sec_counter `i  1 a 2 8 ]
+"114
+[v process_n_display@sec_digit2 sec_digit2 `i  1 a 2 6 ]
+[v process_n_display@sec_digit1 sec_digit1 `i  1 a 2 4 ]
+[v process_n_display@min_digit2 min_digit2 `i  1 a 2 2 ]
+[v process_n_display@min_digit1 min_digit1 `i  1 a 2 0 ]
+"111
+[v process_n_display@min_input min_input `i  1 p 2 9 ]
+"146
+} 0
+"62
+[v _lat1_pulse lat1_pulse `(v  1 e 1 0 ]
+{
+"66
+} 0
+"50
+[v _lat0_pulse lat0_pulse `(v  1 e 1 0 ]
+{
+"54
+} 0
+"84
+[v _data_1 data_1 `(v  1 e 1 0 ]
+{
+"85
+[v data_1@i i `i  1 a 2 5 ]
+"84
+[v data_1@index_1 index_1 `i  1 p 2 0 ]
+"95
+} 0
+"56
+[v _clk1_pulse clk1_pulse `(v  1 e 1 0 ]
+{
+"60
+} 0
+"71
+[v _data_0 data_0 `(v  1 e 1 0 ]
+{
+"72
+[v data_0@i i `i  1 a 2 5 ]
+"71
+[v data_0@index_0 index_0 `i  1 p 2 0 ]
+"82
+} 0
+"44
+[v _clk0_pulse clk0_pulse `(v  1 e 1 0 ]
+{
+"48
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
