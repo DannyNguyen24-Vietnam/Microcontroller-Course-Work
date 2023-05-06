@@ -1,0 +1,349 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1509 ]
+[d frameptr 6 ]
+"1 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"72 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"287
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1390
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"13 D:\MPLAB-Sim\Ex_6-1.X\Ex6_1_LCD.c
+[v _main main `(v  1 e 1 0 ]
+"46 D:\MPLAB-Sim\Ex_6-1.X\lcd.c
+[v _LCD_Initialize LCD_Initialize `(v  1 e 1 0 ]
+"80
+[v _LCDWriteNibble LCDWriteNibble `(v  1 e 1 0 ]
+"133
+[v _LCDPutChar LCDPutChar `(v  1 e 1 0 ]
+"148
+[v _LCDPutCmd LCDPutCmd `(v  1 e 1 0 ]
+"165
+[v _LCDPutStr LCDPutStr `(v  1 e 1 0 ]
+"178
+[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
+[s S54 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"536 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1509.h
+[u S63 . 1 `S54 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES63  1 e 1 @14 ]
+"1092
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1131
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1912
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S39 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1926
+[u S45 . 1 `S39 1 . 1 0 ]
+[v _LATBbits LATBbits `VES45  1 e 1 @269 ]
+"1951
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2593
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2629
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"55 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"66
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+"13 D:\MPLAB-Sim\Ex_6-1.X\Ex6_1_LCD.c
+[v _main main `(v  1 e 1 0 ]
+{
+"18
+[v main@time_string time_string `[9]uc  1 a 9 38 ]
+"17
+[v main@second_counter second_counter `uc  1 a 1 55 ]
+"16
+[v main@minute_counter minute_counter `uc  1 a 1 54 ]
+"15
+[v main@hour_counter hour_counter `uc  1 a 1 53 ]
+"24
+[v main@second_digit2 second_digit2 `uc  1 a 1 52 ]
+[v main@second_digit1 second_digit1 `uc  1 a 1 51 ]
+"23
+[v main@minute_digit2 minute_digit2 `uc  1 a 1 50 ]
+[v main@minute_digit1 minute_digit1 `uc  1 a 1 49 ]
+"22
+[v main@hour_digit2 hour_digit2 `uc  1 a 1 48 ]
+[v main@hour_digit1 hour_digit1 `uc  1 a 1 47 ]
+"68
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[v sprintf@s s `*.4uc  1 a 1 wreg ]
+[u S449 . 2 `*.1uc 1 buffer 2 0 `*.1DCuc 1 source 2 0 ]
+"13
+[s S452 _IO_FILE 10 `S449 1 . 2 0 `i 1 count 2 2 `[2]uc 1 ungetbuf 2 4 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
+[v sprintf@f f `S452  1 a 10 16 ]
+"12
+[v sprintf@ap ap `[1]*.4v  1 a 1 14 ]
+"9
+[v sprintf@s s `*.4uc  1 a 1 wreg ]
+[v sprintf@fmt fmt `*.25DCuc  1 p 2 0 ]
+"15
+[v sprintf@s s `*.4uc  1 a 1 15 ]
+"23
+} 0
+"1390 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S484 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S484  1 a 1 wreg ]
+"1393
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 68 ]
+"1390
+[v vfprintf@fp fp `*.4S484  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 62 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 64 ]
+"1395
+"1390
+[v vfprintf@fp fp `*.4S484  1 a 1 67 ]
+"1404
+} 0
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S484 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S484  1 a 1 wreg ]
+"696
+[v vfpfcnvrt@ll ll `o  1 a 8 53 ]
+"692
+[v vfpfcnvrt@fp fp `*.4S484  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 46 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 47 ]
+"702
+"692
+[v vfpfcnvrt@fp fp `*.4S484  1 a 1 61 ]
+"1387
+} 0
+"287
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+{
+[s S484 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S484  1 a 1 wreg ]
+"290
+[v dtoa@n n `o  1 a 8 36 ]
+"289
+[v dtoa@i i `i  1 a 2 44 ]
+[v dtoa@s s `i  1 a 2 34 ]
+[v dtoa@w w `i  1 a 2 32 ]
+[v dtoa@p p `i  1 a 2 30 ]
+"287
+[v dtoa@fp fp `*.4S484  1 a 1 wreg ]
+[v dtoa@d d `o  1 p 8 16 ]
+"293
+"287
+[v dtoa@fp fp `*.4S484  1 a 1 29 ]
+"328
+} 0
+"72
+[v _pad pad `(i  1 s 2 pad ]
+{
+[s S484 _IO_FILE 0 ]
+[v pad@fp fp `*.4S484  1 a 1 wreg ]
+"74
+[v pad@w w `i  1 a 2 9 ]
+[v pad@i i `i  1 a 2 7 ]
+"72
+[v pad@fp fp `*.4S484  1 a 1 wreg ]
+[v pad@buf buf `*.5uc  1 p 1 4 ]
+[v pad@p p `i  1 p 2 5 ]
+"77
+"72
+[v pad@fp fp `*.4S484  1 a 1 11 ]
+"95
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@a a `*.5DCuc  1 a 1 3 ]
+"5
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@s s `*.5DCuc  1 a 1 4 ]
+"12
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 1 ]
+"10
+[v fputs@c c `uc  1 a 1 0 ]
+"8
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+[u S449 . 2 `*.1uc 1 buffer 2 0 `*.1DCuc 1 source 2 0 ]
+[s S452 _IO_FILE 10 `S449 1 . 2 0 `i 1 count 2 2 `[2]uc 1 ungetbuf 2 4 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
+[v fputs@fp fp `*.4S452  1 p 1 8 ]
+"13
+[v fputs@s s `*.5DCuc  1 a 1 3 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S449 . 2 `*.1uc 1 buffer 2 0 `*.1DCuc 1 source 2 0 ]
+[s S452 _IO_FILE 10 `S449 1 . 2 0 `i 1 count 2 2 `[2]uc 1 ungetbuf 2 4 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
+[v fputc@fp fp `*.4S452  1 p 1 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 3 ]
+"4
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\aomod.c
+[v ___aomod __aomod `(o  1 e 8 0 ]
+{
+"12
+[v ___aomod@sign sign `uc  1 a 1 2 ]
+[v ___aomod@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aomod@divisor divisor `o  1 p 8 0 ]
+[v ___aomod@dividend dividend `o  1 p 8 8 ]
+"36
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\aodiv.c
+[v ___aodiv __aodiv `(o  1 e 8 0 ]
+{
+"12
+[v ___aodiv@quotient quotient `o  1 a 8 3 ]
+"13
+[v ___aodiv@sign sign `uc  1 a 1 2 ]
+[v ___aodiv@counter counter `uc  1 a 1 1 ]
+"7
+[v ___aodiv@divisor divisor `o  1 p 8 0 ]
+[v ___aodiv@dividend dividend `o  1 p 8 8 ]
+"43
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"46 D:\MPLAB-Sim\Ex_6-1.X\lcd.c
+[v _LCD_Initialize LCD_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"165
+[v _LCDPutStr LCDPutStr `(v  1 e 1 0 ]
+{
+"167
+[v LCDPutStr@i i `uc  1 a 1 11 ]
+"165
+[v LCDPutStr@str str `*.26DCuc  1 p 2 6 ]
+"176
+} 0
+"133
+[v _LCDPutChar LCDPutChar `(v  1 e 1 0 ]
+{
+[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
+[v LCDPutChar@ch ch `uc  1 a 1 wreg ]
+"135
+[v LCDPutChar@ch ch `uc  1 a 1 5 ]
+"145
+} 0
+"178
+[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
+{
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@ln ln `uc  1 p 1 6 ]
+"181
+[v LCDGoto@pos pos `uc  1 a 1 9 ]
+"192
+} 0
+"148
+[v _LCDPutCmd LCDPutCmd `(v  1 e 1 0 ]
+{
+[v LCDPutCmd@ch ch `uc  1 a 1 wreg ]
+[v LCDPutCmd@ch ch `uc  1 a 1 wreg ]
+"150
+[v LCDPutCmd@ch ch `uc  1 a 1 5 ]
+"162
+} 0
+"80
+[v _LCDWriteNibble LCDWriteNibble `(v  1 e 1 0 ]
+{
+[v LCDWriteNibble@ch ch `uc  1 a 1 wreg ]
+[v LCDWriteNibble@ch ch `uc  1 a 1 wreg ]
+[v LCDWriteNibble@rs rs `uc  1 p 1 0 ]
+"83
+[v LCDWriteNibble@ch ch `uc  1 a 1 2 ]
+"131
+} 0
