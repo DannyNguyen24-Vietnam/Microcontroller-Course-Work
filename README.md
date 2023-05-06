@@ -1,2 +1,3 @@
 # Microcontroller-Course-Work
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qnvelLxP1BY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+In this project, I presented a simple project of blinking LEDs (Light Emitting Diodes) using PIC16F1509 microcontroller programmed by using Microchip MPLAB X IDE
+Here is my demo video uploaded on YouTube: https://youtu.be/qnvelLxP1BY
