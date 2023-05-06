@@ -1,0 +1,729 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\74HC595_Countdown_Clock.X.production.o
+cinit CODE 0 7FD 7FD 3 2 1
+idloc IDLOC 5 8000 8000 4 2 1
+text1 CODE 0 FC5 FC5 1C 2 1
+text2 CODE 0 6 6 A 2 1
+text3 CODE 0 EEE EEE 13 2 1
+text4 CODE 0 FA9 FA9 1C 2 1
+text5 CODE 0 103 103 2E 2 1
+text6 CODE 0 54 54 25 2 1
+text7 CODE 0 F8D F8D 1C 2 1
+text8 CODE 0 D5 D5 2E 2 1
+text9 CODE 0 F71 F71 1C 2 1
+text10 CODE 0 EDB EDB 13 2 1
+text11 CODE 0 10 10 1F 2 1
+text12 CODE 0 25C 25C 5A1 2 1
+text13 CODE 0 F55 F55 1C 2 1
+text14 CODE 0 EAB EAB A 2 1
+text15 CODE 0 EC8 EC8 13 2 1
+text16 CODE 0 F39 F39 1C 2 1
+text17 CODE 0 A7 A7 2E 2 1
+text18 CODE 0 2F 2F 25 2 1
+text19 CODE 0 F1D F1D 1C 2 1
+text20 CODE 0 79 79 2E 2 1
+text21 CODE 0 F01 F01 1C 2 1
+text22 CODE 0 EB5 EB5 13 2 1
+text23 CODE 0 FE1 FE1 1F 2 1
+text24 CODE 0 EA7 EA7 4 2 1
+text25 CODE 0 EA3 EA3 4 2 1
+maintext CODE 0 131 131 12B 2 1
+cstackCOMMON COMMON 1 70 70 8 1 1
+config CONFIG 4 8007 8007 2 2 1
+$C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+idloc IDLOC 5 8000 8000 4 2 1
+reset_vec CODE 0 0 0 2 2 1
+end_init CODE 0 2 2 2 2 1
+config CONFIG 4 8007 8007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-32F 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-32F 1
+CONST 4-5 2
+CONST 800-EA2 2
+CONST 1000-1FFF 2
+ENTRY 4-5 2
+ENTRY 800-EA2 2
+ENTRY 1000-1FFF 2
+SFR10 500-56F 1
+SFR11 580-5EF 1
+SFR12 600-66F 1
+SFR13 680-6EF 1
+SFR14 700-76F 1
+SFR15 780-7EF 1
+SFR16 800-86F 1
+SFR17 880-8EF 1
+SFR18 900-96F 1
+SFR19 980-9EF 1
+SFR20 A00-A6F 1
+SFR21 A80-AEF 1
+SFR22 B00-B6F 1
+SFR23 B80-BEF 1
+SFR24 C00-C6F 1
+SFR25 C80-CEF 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 4-5 2
+CODE 800-EA2 2
+CODE 1000-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-19F 1
+SFR4 200-21F 1
+SFR5 280-29F 1
+SFR6 300-31F 1
+SFR7 380-3EF 1
+SFR8 400-46F 1
+SFR9 480-4EF 1
+BIGRAM 2000-21EF 1
+COMMON 78-7D 1
+STRCODE 4-5 2
+STRCODE 800-EA2 2
+STRCODE 1000-1FFF 2
+STRING 4-5 2
+STRING 800-EA2 2
+STRING 1000-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\74HC595_Countdown_Clock.X.production.o
+7FD cinit CODE >541:C:\Users\Admin\AppData\Local\Temp\xcAs1ek.s
+7FD cinit CODE >544:C:\Users\Admin\AppData\Local\Temp\xcAs1ek.s
+7FD cinit CODE >550:C:\Users\Admin\AppData\Local\Temp\xcAs1ek.s
+7FD cinit CODE >552:C:\Users\Admin\AppData\Local\Temp\xcAs1ek.s
+7FE cinit CODE >553:C:\Users\Admin\AppData\Local\Temp\xcAs1ek.s
+EA3 text25 CODE >179:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA3 text25 CODE >180:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA5 text25 CODE >181:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA6 text25 CODE >183:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA7 text24 CODE >39:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA7 text24 CODE >40:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EA9 text24 CODE >41:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EAA text24 CODE >43:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE1 text23 CODE >31:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE1 text23 CODE >32:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE4 text23 CODE >33:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE6 text23 CODE >34:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE7 text23 CODE >35:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FF7 text23 CODE >35:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FFB text23 CODE >35:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FFF text23 CODE >37:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EB5 text22 CODE >46:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EB5 text22 CODE >47:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EBE text22 CODE >48:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EC7 text22 CODE >49:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F01 text21 CODE >50:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F01 text21 CODE >51:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F0A text21 CODE >52:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F13 text21 CODE >53:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F1C text21 CODE >54:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+79 text20 CODE >55:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+79 text20 CODE >56:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+82 text20 CODE >57:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+8B text20 CODE >58:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+94 text20 CODE >59:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+9D text20 CODE >60:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+A6 text20 CODE >61:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F1D text19 CODE >62:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F1D text19 CODE >63:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F26 text19 CODE >64:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F2F text19 CODE >65:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F38 text19 CODE >66:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2F text18 CODE >67:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2F text18 CODE >68:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+38 text18 CODE >69:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+41 text18 CODE >70:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+4A text18 CODE >71:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+53 text18 CODE >72:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+A7 text17 CODE >73:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+A7 text17 CODE >74:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+B0 text17 CODE >75:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+B9 text17 CODE >76:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+C2 text17 CODE >77:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+CB text17 CODE >78:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+D4 text17 CODE >79:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F39 text16 CODE >80:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F39 text16 CODE >81:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F42 text16 CODE >82:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F4B text16 CODE >83:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F54 text16 CODE >84:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EC8 text15 CODE >85:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EC8 text15 CODE >86:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+ED1 text15 CODE >87:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EDA text15 CODE >88:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EAB text14 CODE >89:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EAB text14 CODE >90:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EB4 text14 CODE >91:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F55 text13 CODE >92:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F55 text13 CODE >93:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F5E text13 CODE >94:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F67 text13 CODE >95:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F70 text13 CODE >96:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+25C text12 CODE >100:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+25C text12 CODE >102:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+274 text12 CODE >103:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+28C text12 CODE >104:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2A4 text12 CODE >105:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2BC text12 CODE >106:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2D4 text12 CODE >107:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2EC text12 CODE >108:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+304 text12 CODE >109:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+31C text12 CODE >110:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+334 text12 CODE >111:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+34C text12 CODE >113:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+364 text12 CODE >114:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+37C text12 CODE >115:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+394 text12 CODE >116:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+3AC text12 CODE >117:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+3C4 text12 CODE >118:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+3DC text12 CODE >119:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+3F4 text12 CODE >120:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+40C text12 CODE >121:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+424 text12 CODE >122:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+43C text12 CODE >124:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+454 text12 CODE >125:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+46C text12 CODE >126:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+484 text12 CODE >127:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+49C text12 CODE >128:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+4B4 text12 CODE >129:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+4CC text12 CODE >130:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+4E4 text12 CODE >131:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+4FC text12 CODE >132:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+514 text12 CODE >133:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+52C text12 CODE >135:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+544 text12 CODE >136:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+55C text12 CODE >137:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+574 text12 CODE >138:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+58C text12 CODE >139:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+5A4 text12 CODE >140:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+5BC text12 CODE >141:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+5D4 text12 CODE >142:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+5EC text12 CODE >143:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+604 text12 CODE >144:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+61C text12 CODE >146:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+634 text12 CODE >147:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+64C text12 CODE >148:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+664 text12 CODE >149:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+67C text12 CODE >150:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+694 text12 CODE >151:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6AC text12 CODE >152:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6C4 text12 CODE >153:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6DC text12 CODE >154:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6F4 text12 CODE >155:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+70C text12 CODE >157:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+724 text12 CODE >158:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+73C text12 CODE >159:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+754 text12 CODE >160:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+76C text12 CODE >161:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+784 text12 CODE >162:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+79C text12 CODE >163:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+7B4 text12 CODE >164:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+7CC text12 CODE >165:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+7E4 text12 CODE >166:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+7FC text12 CODE >168:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+10 text11 CODE >171:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+10 text11 CODE >172:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+13 text11 CODE >173:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+15 text11 CODE >174:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+16 text11 CODE >175:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+26 text11 CODE >175:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2A text11 CODE >175:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+2E text11 CODE >177:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EDB text10 CODE >186:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EDB text10 CODE >187:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EE4 text10 CODE >188:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EED text10 CODE >189:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F71 text9 CODE >190:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F71 text9 CODE >191:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F7A text9 CODE >192:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F83 text9 CODE >193:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F8C text9 CODE >194:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+D5 text8 CODE >195:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+D5 text8 CODE >196:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+DE text8 CODE >197:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+E7 text8 CODE >198:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F0 text8 CODE >199:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F9 text8 CODE >200:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+102 text8 CODE >201:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F8D text7 CODE >202:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F8D text7 CODE >203:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F96 text7 CODE >204:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F9F text7 CODE >205:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FA8 text7 CODE >206:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+54 text6 CODE >207:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+54 text6 CODE >208:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+5D text6 CODE >209:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+66 text6 CODE >210:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6F text6 CODE >211:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+78 text6 CODE >212:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+103 text5 CODE >213:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+103 text5 CODE >214:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+10C text5 CODE >215:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+115 text5 CODE >216:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+11E text5 CODE >217:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+127 text5 CODE >218:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+130 text5 CODE >219:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FA9 text4 CODE >220:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FA9 text4 CODE >221:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FB2 text4 CODE >222:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FBB text4 CODE >223:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FC4 text4 CODE >224:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EEE text3 CODE >225:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EEE text3 CODE >226:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+EF7 text3 CODE >227:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F00 text3 CODE >228:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6 text2 CODE >229:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+6 text2 CODE >230:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+F text2 CODE >231:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FC5 text1 CODE >232:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FC5 text1 CODE >233:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FCE text1 CODE >234:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FD7 text1 CODE >235:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+FE0 text1 CODE >236:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+131 maintext CODE >238:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+131 maintext CODE >239:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+133 maintext CODE >240:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+135 maintext CODE >242:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+137 maintext CODE >243:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+138 maintext CODE >244:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+139 maintext CODE >245:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+13A maintext CODE >246:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+13B maintext CODE >247:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+13C maintext CODE >252:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+14C maintext CODE >253:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+14F maintext CODE >255:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+15F maintext CODE >256:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+162 maintext CODE >258:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+172 maintext CODE >259:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+175 maintext CODE >261:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+185 maintext CODE >262:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+188 maintext CODE >264:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+198 maintext CODE >265:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+19B maintext CODE >267:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1AB maintext CODE >268:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1AE maintext CODE >270:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1BE maintext CODE >271:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1C1 maintext CODE >273:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1D1 maintext CODE >274:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1D4 maintext CODE >276:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1E4 maintext CODE >277:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1E7 maintext CODE >279:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1F7 maintext CODE >280:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+1FA maintext CODE >282:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+20A maintext CODE >283:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+20D maintext CODE >285:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+21D maintext CODE >286:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+220 maintext CODE >288:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+230 maintext CODE >289:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+233 maintext CODE >291:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+243 maintext CODE >292:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+246 maintext CODE >294:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+256 maintext CODE >295:D:\MPLAB-Sim\74HC595_Countdown_Clock.X\countdown.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hspace_0 1000 0 ABS 0 - -
+__Hspace_1 78 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10010 0 ABS 0 - -
+__end_of_latch_gen_1 1D4E 0 CODE 0 text25 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+_main 262 0 CODE 0 maintext dist/default/production\74HC595_Countdown_Clock.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+start 4 0 CODE 0 init C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+__Hpowerup 0 0 CODE 0 powerup -
+__end_of_latch_gen 1D56 0 CODE 0 text24 dist/default/production\74HC595_Countdown_Clock.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+__end_of_pulse_gen 2000 0 CODE 0 text23 dist/default/production\74HC595_Countdown_Clock.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_latch_gen 1D4E 0 CODE 0 text24 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_ANSELC 18E 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+_pulse_gen 1FC2 0 CODE 0 text23 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+_pulse_gen_1 20 0 CODE 0 text11 dist/default/production\74HC595_Countdown_Clock.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+___stacklo 0 0 ABS 0 - C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+start_initialization FFA 0 CODE 0 cinit dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_0_C1 1D6A 0 CODE 0 text22 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_0_C4 1DB6 0 CODE 0 text10 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_1_C1 1E02 0 CODE 0 text21 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_1_C4 1EE2 0 CODE 0 text9 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_2_C1 F2 0 CODE 0 text20 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_2_C4 1AA 0 CODE 0 text8 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_3_C1 1E3A 0 CODE 0 text19 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_3_C4 1F1A 0 CODE 0 text7 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_4_C1 5E 0 CODE 0 text18 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_4_C4 A8 0 CODE 0 text6 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_5_C1 14E 0 CODE 0 text17 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_5_C4 206 0 CODE 0 text5 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_6_C1 1E72 0 CODE 0 text16 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_6_C4 1F52 0 CODE 0 text4 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_7_C1 1D90 0 CODE 0 text15 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_7_C4 1DDC 0 CODE 0 text3 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_8_C1 1D56 0 CODE 0 text14 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_8_C4 C 0 CODE 0 text2 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_9_C1 1EAA 0 CODE 0 text13 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_state_9_C4 1F8A 0 CODE 0 text1 dist/default/production\74HC595_Countdown_Clock.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hbank4 0 0 ABS 0 bank4 -
+__Hbank5 0 0 ABS 0 bank5 -
+__Hbank6 0 0 ABS 0 bank6 -
+__Hbank7 0 0 BANK7 1 bank7 -
+__Hbank8 0 0 BANK8 1 bank8 -
+__Hbank9 0 0 BANK9 1 bank9 -
+__Hcinit 1000 0 CODE 0 cinit -
+__Hidloc 10008 0 IDLOC 5 idloc -
+__Hsfr10 0 0 ABS 0 sfr10 -
+__Hsfr11 0 0 ABS 0 sfr11 -
+__Hsfr12 0 0 ABS 0 sfr12 -
+__Hsfr13 0 0 ABS 0 sfr13 -
+__Hsfr14 0 0 ABS 0 sfr14 -
+__Hsfr15 0 0 ABS 0 sfr15 -
+__Hsfr16 0 0 ABS 0 sfr16 -
+__Hsfr17 0 0 ABS 0 sfr17 -
+__Hsfr18 0 0 ABS 0 sfr18 -
+__Hsfr19 0 0 ABS 0 sfr19 -
+__Hsfr20 0 0 ABS 0 sfr20 -
+__Hsfr21 0 0 ABS 0 sfr21 -
+__Hsfr22 0 0 ABS 0 sfr22 -
+__Hsfr23 0 0 ABS 0 sfr23 -
+__Hsfr24 0 0 ABS 0 sfr24 -
+__Hsfr25 0 0 ABS 0 sfr25 -
+__Hsfr26 0 0 ABS 0 sfr26 -
+__Hsfr27 0 0 ABS 0 sfr27 -
+__Hsfr28 0 0 ABS 0 sfr28 -
+__Hsfr29 0 0 ABS 0 sfr29 -
+__Hsfr30 0 0 ABS 0 sfr30 -
+__Hsfr31 0 0 ABS 0 sfr31 -
+__Hstack 0 0 STACK 2 stack -
+__Hbank10 0 0 BANK10 1 bank10 -
+__Hbank11 0 0 BANK11 1 bank11 -
+__Hbank12 0 0 BANK12 1 bank12 -
+__Hbank13 0 0 BANK13 1 bank13 -
+__Hbank14 0 0 BANK14 1 bank14 -
+__Hbank15 0 0 BANK15 1 bank15 -
+__Hbank16 0 0 BANK16 1 bank16 -
+__Hbank17 0 0 BANK17 1 bank17 -
+__Hbank18 0 0 BANK18 1 bank18 -
+__Hbank19 0 0 BANK19 1 bank19 -
+__Hbank20 0 0 BANK20 1 bank20 -
+__Hbank21 0 0 BANK21 1 bank21 -
+__Hbank22 0 0 BANK22 1 bank22 -
+__Hbank23 0 0 BANK23 1 bank23 -
+__Hbank24 0 0 BANK24 1 bank24 -
+__Hbank25 0 0 BANK25 1 bank25 -
+__Hbank26 0 0 BANK26 1 bank26 -
+__Hbank27 0 0 BANK27 1 bank27 -
+__Hbank28 0 0 BANK28 1 bank28 -
+__Hbank29 0 0 BANK29 1 bank29 -
+__Hbank30 0 0 BANK30 1 bank30 -
+__Hbank31 0 0 BANK31 1 bank31 -
+__Hbigram 0 0 ABS 0 bigram -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 10012 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lbank4 0 0 ABS 0 bank4 -
+__Lbank5 0 0 ABS 0 bank5 -
+__Lbank6 0 0 ABS 0 bank6 -
+__Lbank7 0 0 BANK7 1 bank7 -
+__Lbank8 0 0 BANK8 1 bank8 -
+__Lbank9 0 0 BANK9 1 bank9 -
+__Lcinit FFA 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lsfr10 0 0 ABS 0 sfr10 -
+__Lsfr11 0 0 ABS 0 sfr11 -
+__Lsfr12 0 0 ABS 0 sfr12 -
+__Lsfr13 0 0 ABS 0 sfr13 -
+__Lsfr14 0 0 ABS 0 sfr14 -
+__Lsfr15 0 0 ABS 0 sfr15 -
+__Lsfr16 0 0 ABS 0 sfr16 -
+__Lsfr17 0 0 ABS 0 sfr17 -
+__Lsfr18 0 0 ABS 0 sfr18 -
+__Lsfr19 0 0 ABS 0 sfr19 -
+__Lsfr20 0 0 ABS 0 sfr20 -
+__Lsfr21 0 0 ABS 0 sfr21 -
+__Lsfr22 0 0 ABS 0 sfr22 -
+__Lsfr23 0 0 ABS 0 sfr23 -
+__Lsfr24 0 0 ABS 0 sfr24 -
+__Lsfr25 0 0 ABS 0 sfr25 -
+__Lsfr26 0 0 ABS 0 sfr26 -
+__Lsfr27 0 0 ABS 0 sfr27 -
+__Lsfr28 0 0 ABS 0 sfr28 -
+__Lsfr29 0 0 ABS 0 sfr29 -
+__Lsfr30 0 0 ABS 0 sfr30 -
+__Lsfr31 0 0 ABS 0 sfr31 -
+__Lstack 0 0 STACK 2 stack -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hheap 0 0 HEAP 7 heap -
+__Hinit 4 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Hsfr4 0 0 ABS 0 sfr4 -
+__Hsfr5 0 0 ABS 0 sfr5 -
+__Hsfr6 0 0 ABS 0 sfr6 -
+__Hsfr7 0 0 ABS 0 sfr7 -
+__Hsfr8 0 0 ABS 0 sfr8 -
+__Hsfr9 0 0 ABS 0 sfr9 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Lheap 0 0 HEAP 7 heap -
+__Linit 4 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Lsfr4 0 0 ABS 0 sfr4 -
+__Lsfr5 0 0 ABS 0 sfr5 -
+__Lsfr6 0 0 ABS 0 sfr6 -
+__Lsfr7 0 0 ABS 0 sfr7 -
+__Lsfr8 0 0 ABS 0 sfr8 -
+__Lsfr9 0 0 ABS 0 sfr9 -
+__Ltext 0 0 ABS 0 text -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 1000 0 ABS 0 - -
+__S1 78 0 ABS 0 - -
+__end_of_state_0_C1 1D90 0 CODE 0 text22 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_0_C4 1DDC 0 CODE 0 text10 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_1_C1 1E3A 0 CODE 0 text21 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_1_C4 1F1A 0 CODE 0 text9 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_2_C1 14E 0 CODE 0 text20 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_2_C4 206 0 CODE 0 text8 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_3_C1 1E72 0 CODE 0 text19 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_3_C4 1F52 0 CODE 0 text7 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_4_C1 A8 0 CODE 0 text18 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_4_C4 F2 0 CODE 0 text6 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_5_C1 1AA 0 CODE 0 text17 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_5_C4 262 0 CODE 0 text5 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_6_C1 1EAA 0 CODE 0 text16 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_6_C4 1F8A 0 CODE 0 text4 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_7_C1 1DB6 0 CODE 0 text15 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_7_C4 1E02 0 CODE 0 text3 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_8_C1 1D6A 0 CODE 0 text14 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_8_C4 20 0 CODE 0 text2 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_9_C1 1EE2 0 CODE 0 text13 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_state_9_C4 1FC2 0 CODE 0 text1 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lintentry 4 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+__ptext10 1DB6 0 CODE 0 text10 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext11 20 0 CODE 0 text11 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext12 4B8 0 CODE 0 text12 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext13 1EAA 0 CODE 0 text13 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext14 1D56 0 CODE 0 text14 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext15 1D90 0 CODE 0 text15 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext16 1E72 0 CODE 0 text16 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext17 14E 0 CODE 0 text17 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext18 5E 0 CODE 0 text18 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext19 1E3A 0 CODE 0 text19 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext20 F2 0 CODE 0 text20 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext21 1E02 0 CODE 0 text21 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext22 1D6A 0 CODE 0 text22 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext23 1FC2 0 CODE 0 text23 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext24 1D4E 0 CODE 0 text24 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext25 1D46 0 CODE 0 text25 dist/default/production\74HC595_Countdown_Clock.X.production.o
+_latch_gen_1 1D46 0 CODE 0 text25 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lbank10 0 0 BANK10 1 bank10 -
+__Lbank11 0 0 BANK11 1 bank11 -
+__Lbank12 0 0 BANK12 1 bank12 -
+__Lbank13 0 0 BANK13 1 bank13 -
+__Lbank14 0 0 BANK14 1 bank14 -
+__Lbank15 0 0 BANK15 1 bank15 -
+__Lbank16 0 0 BANK16 1 bank16 -
+__Lbank17 0 0 BANK17 1 bank17 -
+__Lbank18 0 0 BANK18 1 bank18 -
+__Lbank19 0 0 BANK19 1 bank19 -
+__Lbank20 0 0 BANK20 1 bank20 -
+__Lbank21 0 0 BANK21 1 bank21 -
+__Lbank22 0 0 BANK22 1 bank22 -
+__Lbank23 0 0 BANK23 1 bank23 -
+__Lbank24 0 0 BANK24 1 bank24 -
+__Lbank25 0 0 BANK25 1 bank25 -
+__Lbank26 0 0 BANK26 1 bank26 -
+__Lbank27 0 0 BANK27 1 bank27 -
+__Lbank28 0 0 BANK28 1 bank28 -
+__Lbank29 0 0 BANK29 1 bank29 -
+__Lbank30 0 0 BANK30 1 bank30 -
+__Lbank31 0 0 BANK31 1 bank31 -
+__pmaintext 262 0 CODE 0 maintext dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lbigram 0 0 ABS 0 bigram -
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+_LATCbits 10E 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+__end_of_pulse_gen_1 5E 0 CODE 0 text11 dist/default/production\74HC595_Countdown_Clock.X.production.o
+pulse_gen@i 75 0 COMMON 1 cstackCOMMON dist/default/production\74HC595_Countdown_Clock.X.production.o
+pulse_gen@n 70 0 COMMON 1 cstackCOMMON dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Lend_init 4 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FFA 0 CODE 0 cinit dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hintentry 4 0 CODE 0 intentry -
+pulse_gen_1@i_1 75 0 COMMON 1 cstackCOMMON dist/default/production\74HC595_Countdown_Clock.X.production.o
+pulse_gen_1@n_1 70 0 COMMON 1 cstackCOMMON dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+__end_of_second_counting FFA 0 CODE 0 text12 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__ptext1 1F8A 0 CODE 0 text1 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext2 C 0 CODE 0 text2 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext3 1DDC 0 CODE 0 text3 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext4 1F52 0 CODE 0 text4 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext5 206 0 CODE 0 text5 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext6 A8 0 CODE 0 text6 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext7 1F1A 0 CODE 0 text7 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext8 1AA 0 CODE 0 text8 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__ptext9 1EE2 0 CODE 0 text9 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+___heap_hi 0 0 ABS 0 - C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+___heap_lo 0 0 ABS 0 - C:\Users\Admin\AppData\Local\Temp\xcAs1ek.o
+__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__Lclrtext 0 0 ABS 0 clrtext -
+_second_counting 4B8 0 CODE 0 text12 dist/default/production\74HC595_Countdown_Clock.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hend_init 8 0 CODE 0 end_init -
+__end_of_main 4B8 0 CODE 0 maintext dist/default/production\74HC595_Countdown_Clock.X.production.o
+_TRISC 8E 0 ABS 0 - dist/default/production\74HC595_Countdown_Clock.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__initialization FFA 0 CODE 0 cinit dist/default/production\74HC595_Countdown_Clock.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7FD FFA 3 2
+text1 0 FC5 1F8A 1C 2
+text2 0 6 C A 2
+text3 0 EEE 1DDC 13 2
+text4 0 FA9 1F52 1C 2
+text5 0 103 206 2E 2
+text6 0 54 A8 25 2
+text7 0 F8D 1F1A 1C 2
+text8 0 D5 1AA 2E 2
+text9 0 F71 1EE2 1C 2
+text10 0 EDB 1DB6 13 2
+text11 0 10 20 1F 2
+text12 0 25C 4B8 5A1 2
+text13 0 F55 1EAA 1C 2
+text14 0 EAB 1D56 A 2
+text15 0 EC8 1D90 13 2
+text16 0 F39 1E72 1C 2
+text17 0 A7 14E 2E 2
+text18 0 2F 5E 25 2
+text19 0 F1D 1E3A 1C 2
+text20 0 79 F2 2E 2
+text21 0 F01 1E02 1C 2
+text22 0 EB5 1D6A 13 2
+text23 0 FE1 1FC2 1F 2
+text24 0 EA7 1D4E 4 2
+text25 0 EA3 1D46 4 2
+maintext 0 131 262 12B 2
+cstackCOMMON 1 70 70 8 1
+reset_vec 0 0 0 4 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
