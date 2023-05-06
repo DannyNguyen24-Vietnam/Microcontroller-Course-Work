@@ -1,0 +1,270 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"72 D:\MPLAB-Sim\Ex_10-2_20146110.X\main.c
+[v _clk_pulse clk_pulse `(v  1 e 1 0 ]
+"83
+[v _lat_pulse lat_pulse `(v  1 e 1 0 ]
+"94
+[v _bit_shift bit_shift `(v  1 e 1 0 ]
+"134
+[v _motor_dir motor_dir `(v  1 e 1 0 ]
+"169
+[v _main main `(v  1 e 1 0 ]
+"50 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+"82
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+"62 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+[s S99 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"509 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+[u S108 . 1 `S99 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES108  1 e 1 @13 ]
+[s S223 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"571
+[u S232 . 1 `S223 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES232  1 e 1 @17 ]
+"942
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"962
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"982
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+[s S245 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+"1003
+[s S253 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+[u S257 . 1 `S245 1 . 1 0 `S253 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES257  1 e 1 @28 ]
+"1153
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1215
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S330 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1479
+[s S339 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S344 . 1 `S330 1 . 1 0 `S339 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES344  1 e 1 @149 ]
+"1590
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1649
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1707
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2040
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S43 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2057
+[u S52 . 1 `S43 1 . 1 0 ]
+[v _LATAbits LATAbits `VES52  1 e 1 @268 ]
+"2097
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S22 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2114
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _LATBbits LATBbits `VES31  1 e 1 @269 ]
+"2431
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2780
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
+"2842
+[v _APFCON1 APFCON1 `VEuc  1 e 1 @286 ]
+"2862
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2914
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3488
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3517
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+[s S73 . 1 `uc 1 WPUB0 1 0 :1:0 
+`uc 1 WPUB1 1 0 :1:1 
+`uc 1 WPUB2 1 0 :1:2 
+`uc 1 WPUB3 1 0 :1:3 
+`uc 1 WPUB4 1 0 :1:4 
+`uc 1 WPUB5 1 0 :1:5 
+`uc 1 WPUB6 1 0 :1:6 
+`uc 1 WPUB7 1 0 :1:7 
+]
+"3537
+[s S82 . 1 `uc 1 WPUB 1 0 :8:0 
+]
+[u S84 . 1 `S73 1 . 1 0 `S82 1 . 1 0 ]
+[v _WPUBbits WPUBbits `VES84  1 e 1 @525 ]
+[s S182 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+`uc 1 C1TSEL1 1 0 :1:1 
+`uc 1 C2TSEL0 1 0 :1:2 
+`uc 1 C2TSEL1 1 0 :1:3 
+`uc 1 C3TSEL0 1 0 :1:4 
+`uc 1 C3TSEL1 1 0 :1:5 
+`uc 1 C4TSEL0 1 0 :1:6 
+`uc 1 C4TSEL1 1 0 :1:7 
+]
+"5506
+[s S191 . 1 `uc 1 C1TSEL 1 0 :2:0 
+`uc 1 C2TSEL 1 0 :2:2 
+`uc 1 C3TSEL 1 0 :2:4 
+`uc 1 C4TSEL 1 0 :2:6 
+]
+[u S196 . 1 `S182 1 . 1 0 `S191 1 . 1 0 ]
+[v _CCPTMRS0bits CCPTMRS0bits `VES196  1 e 1 @670 ]
+"5578
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
+"5598
+[v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
+"5618
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
+"66 D:\MPLAB-Sim\Ex_10-2_20146110.X\main.c
+[v _Com_Cathode Com_Cathode `[6]uc  1 e 6 0 ]
+"169
+[v _main main `(v  1 e 1 0 ]
+{
+"180
+[v main@state state `uc  1 a 1 9 ]
+"181
+[v main@motor_state motor_state `uc  1 a 1 8 ]
+"182
+[v main@temp temp `uc  1 a 1 7 ]
+"350
+} 0
+"134
+[v _motor_dir motor_dir `(v  1 e 1 0 ]
+{
+[v motor_dir@dir dir `uc  1 a 1 wreg ]
+[v motor_dir@dir dir `uc  1 a 1 wreg ]
+"137
+[v motor_dir@dir dir `uc  1 a 1 4 ]
+"163
+} 0
+"82 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/pwm3.c
+[v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
+{
+[v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
+"89
+} 0
+"94 D:\MPLAB-Sim\Ex_10-2_20146110.X\main.c
+[v _bit_shift bit_shift `(v  1 e 1 0 ]
+{
+[v bit_shift@index index `uc  1 a 1 wreg ]
+"97
+[v bit_shift@i i `uc  1 a 1 5 ]
+"98
+[v bit_shift@temp_val temp_val `uc  1 a 1 4 ]
+"94
+[v bit_shift@index index `uc  1 a 1 wreg ]
+"97
+[v bit_shift@index index `uc  1 a 1 3 ]
+"129
+} 0
+"83
+[v _lat_pulse lat_pulse `(v  1 e 1 0 ]
+{
+"90
+} 0
+"72
+[v _clk_pulse clk_pulse `(v  1 e 1 0 ]
+{
+"79
+} 0
+"50 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"62 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"64 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/pwm3.c
+[v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
+{
+"80
+} 0
+"55 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"60 D:\MPLAB-Sim\Ex_10-2_20146110.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"68
+} 0
