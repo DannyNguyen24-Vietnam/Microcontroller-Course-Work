@@ -25,4 +25,5 @@ For 6th Week: \
   Exercise 2 - Simulation: https://youtu.be/Z4Be2RcGxhY \
   Exercise 3 - Simulation: https://youtu.be/qBsd7zLb8ko \
 For 8th Week: \
-  The Last Exercise: https://youtu.be/g7Sg6A1iaXk
+  The Last Exercise: https://youtu.be/g7Sg6A1iaXk \
+Note: The 'lcd.h' and 'lcd.c' used for projects that used LCD
