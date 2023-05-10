@@ -9,8 +9,8 @@ For 2nd Week: \
   Exercise 1 - Practical:  https://youtu.be/j2DAVkqguUY \
   Exercise 2 - Practical:  https://youtu.be/9KediYdYkdE \
 For 3rd Week: \
-  Exercise 1 - Practical: https://youtu.be/K6kfqDpy7Y4\
-  Exercise 2 - Practical: https://youtu.be/Jv4N8ccc-io\
+  Exercise 1 - Practical: https://youtu.be/K6kfqDpy7Y4 \
+  Exercise 2 - Practical: https://youtu.be/Jv4N8ccc-io \
 For 4th Week: \
   Exercise 1 - Practical: https://youtu.be/JY58EzfGyV0 \
   Exercise 2 - Practical: https://youtu.be/vQy8BGwuSvI \
